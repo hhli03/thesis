@@ -1,0 +1,294 @@
+@font-face {
+    font-family: 'Neue Montreal-Book';
+    src: url('asset/font/PPNeueMontreal-Book.woff') format('woff'),
+}
+
+@font-face {
+    font-family: 'Neue Montreal-Book Italic';
+    src: url('asset/font/PPNeueMontreal-BookItalic.woff') format('woff'),
+}
+
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: white;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    padding: 0 2vw; /* Fixed side spacing */
+}
+
+/* Fixed Yellow Side Lines */
+.fixed-lines {
+    position: fixed;
+    top: 0;
+    left: 1.5vw; /* Moves line inward from the left */
+    width: 0.2vw; /* Thin yellow line */
+    height: 100vh;
+    background: #FDDD1C;
+}
+
+.fixed-lines::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    right: 1.5vw; /* Moves line inward from the right */
+    width: 0.2vw; /* Thin yellow line */
+    height: 100vh;
+    background: #FDDD1C;
+}
+
+/* Fixed Header */
+header {
+    position: fixed;
+    top: 1.5vw;
+    width: calc(100% - 3vw); /* Keeps header within yellow lines */
+    left: 1.5vw; /* Aligns header exactly within the yellow lines */
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Ensures vertical alignment */
+    padding: 0 1.5vw; /* Adds equal spacing on both sides */
+    z-index: 10;
+}
+
+/* About Section */
+.about {
+    font-family: 'Neue Montreal-Book';
+    font-size: 1.5vw;
+    font-weight: bold;
+    color: #FDDD1C;
+    margin-left: 0.5vw; /* Adds the same margin as .icon to match spacing */
+}
+
+/* Custom Icon Styling */
+.icon {
+    display: flex;
+    position: relative; /* Ensures bars stay inside */
+    width: 3vw; /* Adjust width */
+    height: 3.5vw; /* Increased height to prevent cropping */
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.5vw;
+}
+
+/* General Bar Styling */
+.bar {
+    width: 0.2vw;
+    height: 1.2vw;
+    background: #FDDD1C;
+    position: absolute;
+}
+
+/* Row 1 - Top Bar */
+.row-1 {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Row 2 - Two Bars */
+.row-2:nth-child(2) {
+    top: 1.2vw;
+    left: 25%;
+}
+
+.row-2:nth-child(3) {
+    top: 1.2vw;
+    right: 25%;
+}
+
+/* Row 3 - Three Bars */
+.row-3:nth-child(4) {
+    top: 2.4vw;
+    left: 0%;
+}
+
+.row-3:nth-child(5) {
+    top: 2.4vw;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.row-3:nth-child(6) {
+    top: 2.4vw;
+    right: 0%;
+}
+
+
+
+
+/* Carousel Container */
+.carousel-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    margin-top: 6vw;
+}
+
+/* Ensure carousel only shows one image at a time */
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 16vw; /* Row height stays fixed */
+    overflow: hidden; /* Prevents multiple images from showing */
+}
+
+/* Ensure the track takes up full width and images slide properly */
+.carousel-track {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+    height: 100%;
+    width: 100%; /* Ensures full width track */
+}
+
+/* Ensure carousel only shows correct number of images */
+.carousel-track img {
+    height: 16vw; /* Keeps height consistent */
+    object-fit: contain; /* Prevents distortion */
+    flex-shrink: 0; /* Prevents images from shrinking */
+    padding:2vw;
+}
+
+
+/* Row-specific widths */
+.carousel[data-images="1"] .carousel-track img {
+    width: 100%;
+}
+
+.carousel[data-images="2"] .carousel-track img {
+    width: 50%;
+}
+
+
+.carousel[data-images="3"] .carousel-track img {
+    width: 33.33%;
+}
+
+.carousel[data-images="4"] .carousel-track img {
+    width: 25%; /* Each image takes 25% of the row */
+    height: 16vw; /* Keeps height fixed */
+    object-fit: contain; /* Prevents distortion */
+    padding: 1vw; /* Adjust padding as needed */
+    flex-shrink: 0; /* Prevents shrinking */
+}
+
+.prev, .next {
+    position: absolute;
+    background: transparent;
+    border:none;
+    font-size: 1.8vw;
+    cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    padding: 0.8vw; /* Adjust padding for button size */
+    width: 3vw; /* Fixed width */
+    height: 3vw; /* Fixed height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FDDD1C; /* Yellow arrow color */
+}
+
+/* Align Navigation Buttons */
+.prev {
+    left: 1vw; /* Adjust position */
+}
+
+.next {
+    right: 1vw; /* Adjust position */
+}
+
+/* Hover effect */
+.prev:hover, .next:hover {
+    color: #FDDD1C; /* White arrow color on hover */
+    border: 0.1vw solid #FDDD1C; /* Yellow border */
+    border-radius: 40%; /* Makes it round */
+    background:white;
+    padding:1.5vw;
+}
+
+
+
+
+/* Divider for Row 2 (1 center line) */
+.carousel[data-images="2"]::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 0.2vw; /* Thin vertical line */
+    height: 100%;
+    background: #FDDD1C;
+    transform: translateX(-50%);
+    z-index: 10;
+    pointer-events: none;
+}
+
+/* Dividers for Row 3 (2 evenly spaced lines) */
+.carousel[data-images="3"]::before,
+.carousel[data-images="3"]::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 0.2vw;
+    height: 100%;
+    background: #FDDD1C;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.carousel[data-images="3"]::before {
+    left: 33.33%;
+    transform: translateX(-50%);
+}
+
+.carousel[data-images="3"]::after {
+    left: 66.66%;
+    transform: translateX(-50%);
+}
+
+/* Dividers for Row 4 (3 evenly spaced lines) */
+.carousel[data-images="4"]::before,
+.carousel[data-images="4"]::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 0.2vw;
+    height: 100%;
+    background: #FDDD1C;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.carousel[data-images="4"]::before {
+    left: 25%;
+    transform: translateX(-50%);
+}
+
+.carousel[data-images="4"]::after {
+    left: 75%;
+    transform: translateX(-50%);
+}
+
+/* Third line for Row 4 (middle line at 50%) */
+.carousel[data-images="4"] .divider-middle {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 0.2vw;
+    height: 100%;
+    background: #FDDD1C;
+    z-index: 10;
+    pointer-events: none;
+    transform: translateX(-50%);
+}
+
