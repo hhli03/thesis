@@ -20,7 +20,7 @@ body {
     background: white;
     font-family: Arial, sans-serif;
     overflow-x: hidden;
-    padding: 0 2vw; /* Fixed side spacing */
+    padding: 0 2.5vw; /* Fixed side spacing */
 }
 
 /* Fixed Yellow Side Lines */
@@ -28,7 +28,7 @@ body {
     position: fixed;
     top: 0;
     left: 1.5vw; /* Moves line inward from the left */
-    width: 0.2vw; /* Thin yellow line */
+    width: 0.15vw; /* Thin yellow line */
     height: 100vh;
     background: #FDDD1C;
 }
@@ -38,7 +38,7 @@ body {
     position: fixed;
     top: 0;
     right: 1.5vw; /* Moves line inward from the right */
-    width: 0.2vw; /* Thin yellow line */
+    width: 0.15vw; /* Thin yellow line */
     height: 100vh;
     background: #FDDD1C;
 }
@@ -46,13 +46,13 @@ body {
 /* Fixed Header */
 header {
     position: fixed;
-    top: 1.5vw;
+    top: 1vw;
     width: calc(100% - 3vw); /* Keeps header within yellow lines */
     left: 1.5vw; /* Aligns header exactly within the yellow lines */
     display: flex;
     justify-content: space-between;
     align-items: center; /* Ensures vertical alignment */
-    padding: 0 1.5vw; /* Adds equal spacing on both sides */
+    padding: 0 1vw; /* Adds equal spacing on both sides */
     z-index: 10;
 }
 
@@ -78,8 +78,8 @@ header {
 
 /* General Bar Styling */
 .bar {
-    width: 0.2vw;
-    height: 1.2vw;
+    width: 0.15vw;
+    height: 1.3vw;
     background: #FDDD1C;
     position: absolute;
 }
@@ -122,13 +122,16 @@ header {
 
 
 
-/* Carousel Container */
 .carousel-container {
+    width: 100%;
+    position: relative; /* Ensure absolute positioning works inside */
     display: flex;
     flex-direction: column;
-    gap: 2vw;
+    align-items: center; /* Keep carousels centered */
+    gap: 1.5vw;
     margin-top: 6vw;
 }
+
 
 /* Ensure carousel only shows one image at a time */
 .carousel {
@@ -136,15 +139,16 @@ header {
     align-items: center;
     justify-content: center;
     position: relative;
-    width: 100%;
     height: 16vw; /* Row height stays fixed */
     overflow: hidden; /* Prevents multiple images from showing */
+    max-width: 100%; /* Reduce width */
+    margin: 0 auto; /* Center it */
 }
 
 /* Ensure the track takes up full width and images slide properly */
 .carousel-track {
     display: flex;
-    transition: transform 0.4s ease-in-out;
+    transition: transform 0.3s ease-in-out;
     height: 100%;
     width: 100%; /* Ensures full width track */
 }
@@ -154,29 +158,102 @@ header {
     height: 16vw; /* Keeps height consistent */
     object-fit: contain; /* Prevents distortion */
     flex-shrink: 0; /* Prevents images from shrinking */
-    padding:2vw;
+    padding:3vw;
 }
 
 
 /* Row-specific widths */
 .carousel[data-images="1"] .carousel-track img {
     width: 100%;
+    height: 16vw;
+    padding-right: 2vw; /* Adjust padding as needed */
+    padding-left: 2vw;
+    padding-top:1vw;
+    padding-bottom:1vw;
 }
 
 .carousel[data-images="2"] .carousel-track img {
     width: 50%;
+    height: 16vw;
+    padding-right: 2vw; /* Adjust padding as needed */
+    padding-left: 2vw;
+    padding-top:1vw;
+    padding-bottom:1vw;
 }
 
 
 .carousel[data-images="3"] .carousel-track img {
     width: 33.33%;
+    height: 16vw;
+    padding-right: 4vw; /* Adjust padding as needed */
+    padding-left: 4vw;
+    padding-top:1vw;
+    padding-bottom:1vw;
 }
 
 .carousel[data-images="4"] .carousel-track img {
     width: 25%; /* Each image takes 25% of the row */
     height: 16vw; /* Keeps height fixed */
     object-fit: contain; /* Prevents distortion */
-    padding: 1vw; /* Adjust padding as needed */
+    padding-right: 4vw; /* Adjust padding as needed */
+    padding-left: 4vw;
+    padding-top:1vw;
+    padding-bottom:1vw;
+    flex-shrink: 0; /* Prevents shrinking */
+}
+
+.carousel[data-images="5"] .carousel-track img {
+    width: 20%; /* Each image takes 25% of the row */
+    height: 16vw; /* Keeps height fixed */
+    object-fit: contain; /* Prevents distortion */
+    padding-right: 3.5vw; /* Adjust padding as needed */
+    padding-left: 3.5vw;
+    padding-top:1vw;
+    padding-bottom:1vw;
+    flex-shrink: 0; /* Prevents shrinking */
+}
+
+.carousel[data-images="6"] .carousel-track img {
+    width: 16.66%; /* Each image takes 25% of the row */
+    height: 16vw; /* Keeps height fixed */
+    object-fit: contain; /* Prevents distortion */
+    padding-right: 3.5vw; /* Adjust padding as needed */
+    padding-left: 3.5vw;
+    padding-top:0.5vw;
+    padding-bottom:0.5vw;
+    flex-shrink: 0; /* Prevents shrinking */
+}
+
+.carousel[data-images="7"] .carousel-track img {
+    width: 14.28%; /* Each image takes 25% of the row */
+    height: 16vw; /* Keeps height fixed */
+    object-fit: contain; /* Prevents distortion */
+    padding-right: 3.2vw; /* Adjust padding as needed */
+    padding-left: 3.2vw;
+    padding-top:1.5vw;
+    padding-bottom:1.5vw;
+    flex-shrink: 0; /* Prevents shrinking */
+}
+
+.carousel[data-images="8"] .carousel-track img {
+    width: 12.5%; /* Each image takes 25% of the row */
+    height: 16vw; /* Keeps height fixed */
+    object-fit: contain; /* Prevents distortion */
+    padding-right: 3.2vw; /* Adjust padding as needed */
+    padding-left: 3.2vw;
+    padding-top:1vw;
+    padding-bottom:1vw;
+    flex-shrink: 0; /* Prevents shrinking */
+}
+
+.carousel[data-images="9"] .carousel-track img {
+    width: 11.11%; /* Each image takes 25% of the row */
+    height: 16vw; /* Keeps height fixed */
+    object-fit: contain; /* Prevents distortion */
+    padding-right: 3.1vw; /* Adjust padding as needed */
+    padding-left: 3.1vw;
+    padding-top:0.5vw;
+    padding-bottom:0.5vw;
     flex-shrink: 0; /* Prevents shrinking */
 }
 
@@ -195,25 +272,22 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #FDDD1C; /* Yellow arrow color */
+    color: black; /* Yellow arrow color */
 }
 
 /* Align Navigation Buttons */
 .prev {
-    left: 1vw; /* Adjust position */
+    left: 0vw; /* Adjust position */
 }
 
 .next {
-    right: 1vw; /* Adjust position */
+    right: 0vw; /* Adjust position */
 }
 
 /* Hover effect */
 .prev:hover, .next:hover {
     color: #FDDD1C; /* White arrow color on hover */
-    border: 0.1vw solid #FDDD1C; /* Yellow border */
-    border-radius: 40%; /* Makes it round */
-    background:white;
-    padding:1.5vw;
+    transition: transform 0.3s ease-in-out;
 }
 
 
@@ -225,7 +299,7 @@ header {
     position: absolute;
     top: 0;
     left: 50%;
-    width: 0.2vw; /* Thin vertical line */
+    width: 0.15vw; /* Thin vertical line */
     height: 100%;
     background: #FDDD1C;
     transform: translateX(-50%);
@@ -239,7 +313,7 @@ header {
     content: "";
     position: absolute;
     top: 0;
-    width: 0.2vw;
+    width: 0.15vw;
     height: 100%;
     background: #FDDD1C;
     z-index: 10;
@@ -262,7 +336,7 @@ header {
     content: "";
     position: absolute;
     top: 0;
-    width: 0.2vw;
+    width: 0.15vw;
     height: 100%;
     background: #FDDD1C;
     z-index: 10;
@@ -284,7 +358,7 @@ header {
     position: absolute;
     top: 0;
     left: 50%;
-    width: 0.2vw;
+    width: 0.15vw;
     height: 100%;
     background: #FDDD1C;
     z-index: 10;
@@ -292,3 +366,387 @@ header {
     transform: translateX(-50%);
 }
 
+/* Dividers for Row 5 (4 evenly spaced lines) */
+.carousel[data-images="5"]::before,
+.carousel[data-images="5"]::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 0.15vw;
+    height: 100%;
+    background: #FDDD1C;
+    z-index: 10;
+    pointer-events: none;
+}
+
+/* First divider at 20% */
+.carousel[data-images="5"]::before {
+    left: 20%;
+    transform: translateX(-50%);
+}
+
+/* Second divider at 40% */
+.carousel[data-images="5"] .divider-middle-1 {
+    position: absolute;
+    top: 0;
+    left: 40%;
+    width: 0.15vw;
+    height: 100%;
+    background: #FDDD1C;
+    z-index: 10;
+    pointer-events: none;
+    transform: translateX(-50%);
+}
+
+/* Third divider at 60% */
+.carousel[data-images="5"] .divider-middle-2 {
+    position: absolute;
+    top: 0;
+    left: 60%;
+    width: 0.15vw;
+    height: 100%;
+    background: #FDDD1C;
+    z-index: 10;
+    pointer-events: none;
+    transform: translateX(-50%);
+}
+
+/* Fourth divider at 80% */
+.carousel[data-images="5"]::after {
+    left: 80%;
+    transform: translateX(-50%);
+}
+
+/* Dividers for Row 6 (5 evenly spaced lines) */
+.carousel[data-images="6"]::before,
+.carousel[data-images="6"]::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 0.15vw;
+    height: 100%;
+    background: #FDDD1C;
+    z-index: 10;
+    pointer-events: none;
+}
+
+/* First divider at 16.66% */
+.carousel[data-images="6"]::before {
+    left: 16.66%;
+    transform: translateX(-50%);
+}
+
+/* Fifth divider at 83.33% */
+.carousel[data-images="6"]::after {
+    left: 83.33%;
+    transform: translateX(-50%);
+}
+
+/* Second divider at 33.33% */
+.carousel[data-images="6"] .divider-six-1 {
+    position: absolute;
+    top: 0;
+    left: 33.33%;
+    width: 0.15vw;
+    height: 100%;
+    background: #FDDD1C;
+    z-index: 10;
+    pointer-events: none;
+    transform: translateX(-50%);
+}
+
+/* Third divider at 50% */
+.carousel[data-images="6"] .divider-six-2 {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 0.15vw;
+    height: 100%;
+    background: #FDDD1C;
+    z-index: 10;
+    pointer-events: none;
+    transform: translateX(-50%);
+}
+
+/* Fourth divider at 66.66% */
+.carousel[data-images="6"] .divider-six-3 {
+    position: absolute;
+    top: 0;
+    left: 66.66%;
+    width: 0.15vw;
+    height: 100%;
+    background: #FDDD1C;
+    z-index: 10;
+    pointer-events: none;
+    transform: translateX(-50%);
+}
+
+/* Dividers for Row 7 (6 evenly spaced lines) */
+.carousel[data-images="7"]::before,
+.carousel[data-images="7"]::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 0.15vw;
+    height: 100%;
+    background: #FDDD1C;
+    z-index: 10;
+    pointer-events: none;
+}
+
+/* First divider at 14.28% */
+.carousel[data-images="7"]::before {
+    left: 14.28%;
+    transform: translateX(-50%);
+}
+
+/* Sixth divider at 85.71% */
+.carousel[data-images="7"]::after {
+    left: 85.71%;
+    transform: translateX(-50%);
+}
+
+/* Second divider at 28.57% */
+.carousel[data-images="7"] .divider-seven-1 {
+    position: absolute;
+    top: 0;
+    left: 28.57%;
+    width: 0.15vw;
+    height: 100%;
+    background: #FDDD1C;
+    z-index: 10;
+    pointer-events: none;
+    transform: translateX(-50%);
+}
+
+/* Third divider at 42.85% */
+.carousel[data-images="7"] .divider-seven-2 {
+    position: absolute;
+    top: 0;
+    left: 42.85%;
+    width: 0.15vw;
+    height: 100%;
+    background: #FDDD1C;
+    z-index: 10;
+    pointer-events: none;
+    transform: translateX(-50%);
+}
+
+/* Fourth divider at 57.14% */
+.carousel[data-images="7"] .divider-seven-3 {
+    position: absolute;
+    top: 0;
+    left: 57.14%;
+    width: 0.15vw;
+    height: 100%;
+    background: #FDDD1C;
+    z-index: 10;
+    pointer-events: none;
+    transform: translateX(-50%);
+}
+
+/* Fifth divider at 71.42% */
+.carousel[data-images="7"] .divider-seven-4 {
+    position: absolute;
+    top: 0;
+    left: 71.42%;
+    width: 0.15vw;
+    height: 100%;
+    background: #FDDD1C;
+    z-index: 10;
+    pointer-events: none;
+    transform: translateX(-50%);
+}
+
+/* Dividers for Row 8 (7 evenly spaced lines) */
+.carousel[data-images="8"]::before,
+.carousel[data-images="8"]::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 0.15vw;
+    height: 100%;
+    background: #FDDD1C;
+    z-index: 10;
+    pointer-events: none;
+}
+
+/* First divider at 12.5% */
+.carousel[data-images="8"]::before {
+    left: 12.5%;
+    transform: translateX(-50%);
+}
+
+/* Seventh divider at 87.5% */
+.carousel[data-images="8"]::after {
+    left: 87.5%;
+    transform: translateX(-50%);
+}
+
+/* Second divider at 25% */
+.carousel[data-images="8"] .divider-eight-1 {
+    position: absolute;
+    top: 0;
+    left: 25%;
+    width: 0.15vw;
+    height: 100%;
+    background: #FDDD1C;
+    z-index: 10;
+    pointer-events: none;
+    transform: translateX(-50%);
+}
+
+/* Third divider at 37.5% */
+.carousel[data-images="8"] .divider-eight-2 {
+    position: absolute;
+    top: 0;
+    left: 37.5%;
+    width: 0.15vw;
+    height: 100%;
+    background: #FDDD1C;
+    z-index: 10;
+    pointer-events: none;
+    transform: translateX(-50%);
+}
+
+/* Fourth divider at 50% */
+.carousel[data-images="8"] .divider-eight-3 {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 0.15vw;
+    height: 100%;
+    background: #FDDD1C;
+    z-index: 10;
+    pointer-events: none;
+    transform: translateX(-50%);
+}
+
+/* Fifth divider at 62.5% */
+.carousel[data-images="8"] .divider-eight-4 {
+    position: absolute;
+    top: 0;
+    left: 62.5%;
+    width: 0.15vw;
+    height: 100%;
+    background: #FDDD1C;
+    z-index: 10;
+    pointer-events: none;
+    transform: translateX(-50%);
+}
+
+/* Sixth divider at 75% */
+.carousel[data-images="8"] .divider-eight-5 {
+    position: absolute;
+    top: 0;
+    left: 75%;
+    width: 0.15vw;
+    height: 100%;
+    background: #FDDD1C;
+    z-index: 10;
+    pointer-events: none;
+    transform: translateX(-50%);
+}
+
+/* Dividers for Row 9 (8 evenly spaced lines) */
+.carousel[data-images="9"]::before,
+.carousel[data-images="9"]::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 0.15vw;
+    height: 100%;
+    background: #FDDD1C;
+    z-index: 10;
+    pointer-events: none;
+}
+
+/* First divider at 11.11% */
+.carousel[data-images="9"]::before {
+    left: 11.11%;
+    transform: translateX(-50%);
+}
+
+/* Eighth divider at 88.88% */
+.carousel[data-images="9"]::after {
+    left: 88.88%;
+    transform: translateX(-50%);
+}
+
+/* Second divider at 22.22% */
+.carousel[data-images="9"] .divider-nine-1 {
+    position: absolute;
+    top: 0;
+    left: 22.22%;
+    width: 0.15vw;
+    height: 100%;
+    background: #FDDD1C;
+    z-index: 10;
+    pointer-events: none;
+    transform: translateX(-50%);
+}
+
+/* Third divider at 33.33% */
+.carousel[data-images="9"] .divider-nine-2 {
+    position: absolute;
+    top: 0;
+    left: 33.33%;
+    width: 0.15vw;
+    height: 100%;
+    background: #FDDD1C;
+    z-index: 10;
+    pointer-events: none;
+    transform: translateX(-50%);
+}
+
+/* Fourth divider at 44.44% */
+.carousel[data-images="9"] .divider-nine-3 {
+    position: absolute;
+    top: 0;
+    left: 44.44%;
+    width: 0.15vw;
+    height: 100%;
+    background: #FDDD1C;
+    z-index: 10;
+    pointer-events: none;
+    transform: translateX(-50%);
+}
+
+/* Fifth divider at 55.55% */
+.carousel[data-images="9"] .divider-nine-4 {
+    position: absolute;
+    top: 0;
+    left: 55.55%;
+    width: 0.15vw;
+    height: 100%;
+    background: #FDDD1C;
+    z-index: 10;
+    pointer-events: none;
+    transform: translateX(-50%);
+}
+
+/* Sixth divider at 66.66% */
+.carousel[data-images="9"] .divider-nine-5 {
+    position: absolute;
+    top: 0;
+    left: 66.66%;
+    width: 0.15vw;
+    height: 100%;
+    background: #FDDD1C;
+    z-index: 10;
+    pointer-events: none;
+    transform: translateX(-50%);
+}
+
+/* Seventh divider at 77.77% */
+.carousel[data-images="9"] .divider-nine-6 {
+    position: absolute;
+    top: 0;
+    left: 77.77%;
+    width: 0.15vw;
+    height: 100%;
+    background: #FDDD1C;
+    z-index: 10;
+    pointer-events: none;
+    transform: translateX(-50%);
+}
