@@ -29,8 +29,8 @@ body {
 .fixed-lines {
     position: fixed;
     top: 0;
-    left: 1.5vw;
-    width: 0.18vw;
+    left: 1.2vw;
+    width: 0.185vw;
     height: 100vh;
     background: #FDDD1C;
     z-index: 20; /* Increased to ensure it stays above other elements */
@@ -40,8 +40,8 @@ body {
     content: "";
     position: fixed;
     top: 0;
-    right: 1.5vw;
-    width: 0.18vw;
+    right: 1.3vw;
+    width: 0.185vw;
     height: 100vh;
     background: #FDDD1C;
     z-index: 20; /* Increased to ensure it stays above other elements */

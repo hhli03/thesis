@@ -27,20 +27,22 @@ body {
 .fixed-lines {
     position: fixed;
     top: 0;
-    left: 1.5vw; /* Moves line inward from the left */
-    width: 0.18vw; /* Thin yellow line */
+    left: 1.2vw;
+    width: 0.185vw;
     height: 100vh;
     background: #FDDD1C;
+    z-index: 20; /* Increased to ensure it stays above other elements */
 }
 
 .fixed-lines::after {
     content: "";
     position: fixed;
     top: 0;
-    right: 1.5vw; /* Moves line inward from the right */
-    width: 0.18vw; /* Thin yellow line */
+    right: 1.3vw;
+    width: 0.185vw;
     height: 100vh;
     background: #FDDD1C;
+    z-index: 20; /* Increased to ensure it stays above other elements */
 }
 
 /* Fixed Header */
@@ -886,6 +888,27 @@ header {
 
 
 .carousel[data-images="6"] .carousel-track a img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.carousel[data-images="7"] .carousel-track a {
+    display: block;
+    width: 14.28%;
+    height: 16vw;
+    flex-shrink: 0; /* Prevents shrinking */
+    padding-right: 0vw;
+    padding-left: 0vw;
+    padding-top: 0.2vw;
+    padding-bottom: 0.2vw;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+    overflow: hidden; /* Prevents overflow */
+}
+
+
+.carousel[data-images="7"] .carousel-track a img {
     width: 100%;
     height: 100%;
     object-fit: contain;

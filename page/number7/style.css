@@ -21,7 +21,7 @@ body {
     font-family: 'Neue Montreal-Book', sans-serif;
     overflow-x: hidden;
     padding: 0 2vw;
-    overflow-y: hidden;
+        overflow-y: hidden;
     
 }
 
@@ -46,6 +46,7 @@ body {
     background: #FDDD1C;
     z-index: 20; /* Increased to ensure it stays above other elements */
 }
+
 
 /* Fixed Header */
 header {
@@ -120,9 +121,10 @@ header {
     color: #FDDD1C;
     margin-left: 0.5vw;
 }
+
 .grid-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr; /* 4 Equal Columns */
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; /* 7 Equal Columns */
     gap: 2vw;
     width: 100%;
     margin: 0 auto;
@@ -135,30 +137,62 @@ header {
 /* Left Column: Scrollable Body Text */
 .body-text {
     grid-column: 1 / 2;
-    font-size: 1.4vw;
-    line-height: 2vw;
+    font-size: 1vw;
+    line-height: 1.3vw;
     color: black;
     text-align: left;
-    padding: 1.5vw;
-    scrollbar-width: none; 
+    padding: 1.3vw;
+    scrollbar-width: none;
     -ms-overflow-style: none;
     overflow-x: hidden;
-    hyphens: auto; 
-    overflow-y: auto; /* Make the text scrollable */
+    hyphens: auto;
+    overflow-y: auto;
     max-height: calc(100vh - 6vw);
+    word-break: break-word;
+    overflow-wrap: break-word;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    word-wrap: break-word;
 }
+
+
 
 .body-text::-webkit-scrollbar {
     display: none;
 }
 
+/* Centered Fixed Image */
+.image {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: auto;
+    width: 12vw;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 2vw;
+}
+
+.image img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
 /* Right Column: Fixed Image Caption */
 .image-caption {
-    grid-column: 4 / 5;
-    font-size: 1.4vw;
-    line-height: 2vw;
+    grid-column: 7 / 8;
+    font-size: 1vw;
+    line-height: 1.3vw;
     text-align: left;
-    padding: 1.5vw;
+    padding: 1.3vw;
     box-sizing: border-box;
     max-height: 100vh;
     background: white;
@@ -167,8 +201,77 @@ header {
     overflow-y: auto;
 }
 
+/* Divider Lines for 7 Columns */
+.column-divider-1 {
+    position: fixed;
+    top: 0;
+    left: 14.28%;
+    transform: translateX(-50%);
+    width: 0.18vw;
+    height: 100vh;
+    background: #FDDD1C;
+    z-index: 5;
+}
+
+.column-divider-2 {
+    position: fixed;
+    top: 0;
+    left: 28.57%;
+    transform: translateX(-50%);
+    width: 0.18vw;
+    height: 100vh;
+    background: #FDDD1C;
+    z-index: 5;
+}
+
+.column-divider-3 {
+    position: fixed;
+    top: 0;
+    left: 42.85%;
+    transform: translateX(-50%);
+    width: 0.18vw;
+    height: 100vh;
+    background: #FDDD1C;
+    z-index: 5;
+}
+
+.column-divider-4 {
+    position: fixed;
+    top: 0;
+    left: 57.14%;
+    transform: translateX(-50%);
+    width: 0.18vw;
+    height: 100vh;
+    background: #FDDD1C;
+    z-index: 5;
+}
+
+.column-divider-5 {
+    position: fixed;
+    top: 0;
+    left: 71.42%;
+    transform: translateX(-50%);
+    width: 0.18vw;
+    height: 100vh;
+    background: #FDDD1C;
+    z-index: 5;
+}
+
+.column-divider-6 {
+    position: fixed;
+    top: 0;
+    left: 85.71%;
+    transform: translateX(-50%);
+    width: 0.18vw;
+    height: 100vh;
+    background: #FDDD1C;
+    z-index: 5;
+}
+
+/* Link Styling */
 .fig-link {
     text-decoration: none;
+    color: inherit;
     cursor: pointer;
 }
 
@@ -179,69 +282,6 @@ header {
 
 .caption-text {
     display: inline;
-}
-
-
-
-
-.equation {
-    font-family: 'Neue Montreal-Book Italic';
-}
-
-.image {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 16vw;
-    width: auto;
-    z-index: -1;
-    padding:1vw;
-}
-
-.image img {
-    height: 100%;  /* Fixed height */
-    width: 100%;   /* Maintain aspect ratio */
-    object-fit: contain;
-    display: block;
-    padding:1vw;
-}
-
-/* Divider Lines for 4 Columns */
-.column-divider-1 {
-    position: fixed;
-    top: 0;
-    left: 25%;
-    transform: translateX(-50%);
-    width: 0.18vw;
-    height: 100vh;
-    background: #FDDD1C;
-    z-index: 5;
-    mix-blend-mode: multiply;
-}
-
-.column-divider-2 {
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0.18vw;
-    height: 100vh;
-    background: #FDDD1C;
-    z-index: 5;
-    mix-blend-mode: multiply;
-}
-
-.column-divider-3 {
-    position: fixed;
-    top: 0;
-    left: 75%;
-    transform: translateX(-50%);
-    width: 0.18vw;
-    height: 100vh;
-    background: #FDDD1C;
-    z-index: 5;
-    mix-blend-mode: multiply;
 }
 
 .heading {
