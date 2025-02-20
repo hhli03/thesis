@@ -143,7 +143,7 @@ header {
     text-align: left;
     hyphens: auto;
     hyphens: auto; 
-    padding:1.5vw;
+    padding:1.3vw;
     overflow-x: hidden;
     overflow-y: auto; /* Make the text scrollable */
     max-height: calc(100vh - 6vw); /* Adjust max height */
@@ -160,7 +160,7 @@ header {
     color: black;
     text-align: left;
     width: 100%;
-    padding:1.5vw;
+    padding:1.3vw;
     overflow-y: auto; /* Allow scrolling if needed */
     max-height: calc(100vh - 6vw); /* Align with body-text */
 }

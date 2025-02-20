@@ -140,7 +140,7 @@ header {
     line-height: 1.5vw;
     color: black;
     text-align: left;
-    padding: 1.5vw;
+    padding: 1.3vw;
     scrollbar-width: none;
     -ms-overflow-style: none;
     overflow-x: hidden;
@@ -184,7 +184,7 @@ header {
     font-size: 1.2vw;
     line-height: 1.5vw;
     text-align: left;
-    padding: 1.5vw;
+    padding: 1.3vw;
     box-sizing: border-box;
     max-height: 100vh;
     background: white;
