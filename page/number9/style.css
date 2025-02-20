@@ -1,0 +1,315 @@
+/* Import Custom Fonts */
+@font-face {
+    font-family: 'Neue Montreal-Book';
+    src: url('../../asset/font/PPNeueMontreal-Book.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Neue Montreal-Book Italic';
+    src: url('../../asset/font/PPNeueMontreal-BookItalic.woff') format('woff');
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: white;
+    font-family: 'Neue Montreal-Book', sans-serif;
+    overflow-x: hidden;
+    padding: 0 1.7vw;
+    overflow-y: hidden;
+    
+}
+
+/* Fixed Yellow Side Lines */
+.fixed-lines {
+    position: fixed;
+    top: 0;
+    left: 1.2vw;
+    width: 0.185vw;
+    height: 100vh;
+    background: #FDDD1C;
+    z-index: 20; /* Increased to ensure it stays above other elements */
+}
+
+.fixed-lines::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    right: 1.3vw;
+    width: 0.185vw;
+    height: 100vh;
+    background: #FDDD1C;
+    z-index: 20; /* Increased to ensure it stays above other elements */
+}
+
+
+/* Fixed Header */
+header {
+    position: absolute;
+    top: 1vw;
+    width: calc(100% - 3vw);
+    left: 1.5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1vw;
+    z-index: 10;
+}
+
+
+/* Custom Icon Styling */
+.icon {
+    display: flex;
+    position: relative;
+    width: 3vw;
+    height: 3.5vw;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.5vw;
+}
+
+/* General Bar Styling */
+.bar {
+    width: 0.18vw;
+    height: 1.3vw;
+    background: #FDDD1C;
+    position: absolute;
+}
+
+/* Row 1 - Top Bar */
+.row-1 {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Row 2 - Two Bars */
+.row-2:nth-child(2) {
+    top: 1.2vw;
+    left: 25%;
+}
+
+.row-2:nth-child(3) {
+    top: 1.2vw;
+    right: 25%;
+}
+
+/* Row 3 - Three Bars */
+.row-3:nth-child(4) {
+    top: 2.4vw;
+    left: 0%;
+}
+
+.row-3:nth-child(5) {
+    top: 2.4vw;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.row-3:nth-child(6) {
+    top: 2.4vw;
+    right: 0%;
+}
+
+.about {
+    font-size: 1.78vw;
+    color: #FDDD1C;
+    margin-left: 0.5vw;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr); /* 9 Equal Columns */
+    gap: 2vw;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 6vw;
+    box-sizing: border-box;
+    height: auto;
+    align-items: start;
+}
+
+
+
+/* Left Column: Scrollable Body Text */
+.body-text {
+    grid-column: 1 / 2;
+    font-size: 0.8vw;
+    line-height: 1.1vw;
+    color: black;
+    text-align: left;
+    padding: 1.2vw;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    overflow-x: hidden;
+    hyphens: auto;
+    overflow-y: auto;
+    max-height: calc(100vh - 6vw);
+    word-break: break-word;
+    overflow-wrap: break-word;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    word-wrap: break-word;
+}
+
+.body-text::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+/* Centered Fixed Image */
+.image {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: auto;
+    width: 9vw;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 2vw;
+}
+
+.image img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+/* Right Column: Fixed Image Caption */
+.image-caption {
+    grid-column: 9 / 10;
+    font-size: 0.8vw;
+    line-height: 1.1vw;
+    text-align: left;
+    padding: 1.2vw;
+    box-sizing: border-box;
+    max-height: 100vh;
+    background: white;
+    display: block;
+    hyphens: auto;
+    overflow-y: auto;
+}
+
+/* Divider Lines for 9 Columns */
+.column-divider-1 {
+    position: fixed;
+    top: 0;
+    left: 11.11%;
+    transform: translateX(-50%);
+    width: 0.18vw;
+    height: 100vh;
+    background: #FDDD1C;
+    z-index: 5;
+}
+
+.column-divider-2 {
+    position: fixed;
+    top: 0;
+    left: 22.22%;
+    transform: translateX(-50%);
+    width: 0.18vw;
+    height: 100vh;
+    background: #FDDD1C;
+    z-index: 5;
+}
+
+.column-divider-3 {
+    position: fixed;
+    top: 0;
+    left: 33.33%;
+    transform: translateX(-50%);
+    width: 0.18vw;
+    height: 100vh;
+    background: #FDDD1C;
+    z-index: 5;
+}
+
+.column-divider-4 {
+    position: fixed;
+    top: 0;
+    left: 44.44%;
+    transform: translateX(-50%);
+    width: 0.18vw;
+    height: 100vh;
+    background: #FDDD1C;
+    z-index: 5;
+}
+
+.column-divider-5 {
+    position: fixed;
+    top: 0;
+    left: 55.55%;
+    transform: translateX(-50%);
+    width: 0.18vw;
+    height: 100vh;
+    background: #FDDD1C;
+    z-index: 5;
+}
+
+.column-divider-6 {
+    position: fixed;
+    top: 0;
+    left: 66.66%;
+    transform: translateX(-50%);
+    width: 0.18vw;
+    height: 100vh;
+    background: #FDDD1C;
+    z-index: 5;
+}
+
+.column-divider-7 {
+    position: fixed;
+    top: 0;
+    left: 77.77%;
+    transform: translateX(-50%);
+    width: 0.18vw;
+    height: 100vh;
+    background: #FDDD1C;
+    z-index: 5;
+}
+
+.column-divider-8 {
+    position: fixed;
+    top: 0;
+    left: 88.88%;
+    transform: translateX(-50%);
+    width: 0.18vw;
+    height: 100vh;
+    background: #FDDD1C;
+    z-index: 5;
+}
+
+
+/* Link Styling */
+.fig-link {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.fig-number {
+    display: inline;
+    color: #FDDD1C;
+}
+
+.caption-text {
+    display: inline;
+}
+
+.heading {
+    text-transform: uppercase;
+    font-family: 'Neue Montreal-Book';
+}
