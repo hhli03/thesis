@@ -6,26 +6,47 @@ document.addEventListener("DOMContentLoaded", function () {
         const nextButton = carousel.querySelector(".next");
         const track = carousel.querySelector(".carousel-track");
         const images = track.querySelectorAll("img");
+        let index = 0;
+        const numVisible = parseInt(carousel.dataset.images, 10);
+        const imgWidth = carousel.clientWidth / numVisible;
+        let isSliding = false;
 
-        let index = 0; // Start at the first image
-        const numVisible = parseInt(carousel.dataset.images, 10); // Number of visible images
-        const imgWidth = carousel.clientWidth / numVisible; // Width for each image
-
+        // Function to update the carousel position
         function updateCarousel() {
+            isSliding = true;
+            track.style.transition = "transform 0.5s ease";
             track.style.transform = `translateX(-${index * imgWidth}px)`;
+            setTimeout(() => isSliding = false, 500);
         }
 
-        prevButton.addEventListener("click", () => {
-            index = (index > 0) ? index - 1 : images.length - numVisible; // Move only 1 image
-            updateCarousel();
+        // Previous button functionality
+        prevButton.addEventListener("click", (e) => {
+            e.preventDefault();
+            if (!isSliding) {
+                index = (index > 0) ? index - 1 : images.length - numVisible;
+                updateCarousel();
+            }
         });
 
-        nextButton.addEventListener("click", () => {
-            index = (index < images.length - numVisible) ? index + 1 : 0; // Move only 1 image
-            updateCarousel();
+        // Next button functionality
+        nextButton.addEventListener("click", (e) => {
+            e.preventDefault();
+            if (!isSliding) {
+                index = (index < images.length - numVisible) ? index + 1 : 0;
+                updateCarousel();
+            }
         });
 
-        // Ensure carousel resizes correctly
+        // Allow link navigation only when not sliding
+        track.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", (event) => {
+                if (isSliding) {
+                    event.preventDefault(); // Prevent navigation while sliding
+                }
+            });
+        });
+
+        // Update carousel position on window resize
         window.addEventListener("resize", updateCarousel);
     });
 });

@@ -1,0 +1,217 @@
+/* Import Custom Fonts */
+@font-face {
+    font-family: 'Neue Montreal-Book';
+    src: url('../../asset/font/PPNeueMontreal-Book.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Neue Montreal-Book Italic';
+    src: url('../../asset/font/PPNeueMontreal-BookItalic.woff') format('woff');
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: white;
+    font-family: 'Neue Montreal-Book', sans-serif;
+    overflow-x: hidden;
+    padding: 0 2vw;
+    
+}
+
+/* Fixed Yellow Side Lines */
+.fixed-lines {
+    position: fixed;
+    top: 0;
+    left: 1.5vw;
+    width: 0.18vw;
+    height: 100vh;
+    background: #FDDD1C;
+}
+
+.fixed-lines::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    right: 1.5vw;
+    width: 0.18vw;
+    height: 100vh;
+    background: #FDDD1C;
+}
+
+/* Fixed Header */
+header {
+    position: absolute;
+    top: 1vw;
+    width: calc(100% - 3vw);
+    left: 1.5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1vw;
+    z-index: 10;
+}
+
+
+/* Custom Icon Styling */
+.icon {
+    display: flex;
+    position: relative;
+    width: 3vw;
+    height: 3.5vw;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.5vw;
+}
+
+/* General Bar Styling */
+.bar {
+    width: 0.18vw;
+    height: 1.3vw;
+    background: #FDDD1C;
+    position: absolute;
+}
+
+/* Row 1 - Top Bar */
+.row-1 {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Row 2 - Two Bars */
+.row-2:nth-child(2) {
+    top: 1.2vw;
+    left: 25%;
+}
+
+.row-2:nth-child(3) {
+    top: 1.2vw;
+    right: 25%;
+}
+
+/* Row 3 - Three Bars */
+.row-3:nth-child(4) {
+    top: 2.4vw;
+    left: 0%;
+}
+
+.row-3:nth-child(5) {
+    top: 2.4vw;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.row-3:nth-child(6) {
+    top: 2.4vw;
+    right: 0%;
+}
+
+.about {
+    font-size: 1.78vw;
+    color: #FDDD1C;
+    margin-left: 0.5vw;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2vw;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 6vw;
+    box-sizing: border-box;
+    height: calc(100vh - 1vw); /* Maintain at least full viewport height */
+    align-items: start; /* Align items to the start */
+}
+
+
+
+
+/* Body Text */
+.body-text {
+    font-size: 1.6vw;
+    line-height: 2.3vw;
+    color: black;
+    text-align: left;
+    hyphens: auto;
+    hyphens: auto; 
+    padding:1.5vw;
+    overflow-x: hidden;
+    overflow-y: auto; /* Make the text scrollable */
+    max-height: calc(100vh - 6vw); /* Adjust max height */
+}
+
+.body-text::-webkit-scrollbar {
+    display: none;   /* Chrome, Safari, Opera */
+}
+
+/* Image Caption */
+.image-caption {
+    font-size: 1.6vw;
+    line-height: 2.3vw;
+    color: black;
+    text-align: left;
+    width: 100%;
+    padding:1.5vw;
+    overflow-y: auto; /* Allow scrolling if needed */
+    max-height: calc(100vh - 6vw); /* Align with body-text */
+}
+
+/* FIG Number */
+.fig-number {
+    color: #FDDD1C;
+}
+
+/* Image (Centered on Page) */
+
+.image {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 16vw;
+    width: auto;
+    z-index: -1;
+}
+
+.image img {
+    height: 100%;  /* Fixed height */
+    width: auto;   /* Maintain aspect ratio */
+    object-fit: contain;
+    display: block;
+    padding:1vw;
+}
+
+/* Fixed Yellow Center Divider Line */
+.center-divider {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0.18vw;
+    height: 100vh;
+    background: #FDDD1C;
+    z-index: 5; /* Make sure it's above the background image but below text */
+    mix-blend-mode: multiply;
+}
+
+.heading {
+    text-transform: uppercase; /* Converts text to ALL CAPS */
+    font-family: 'Neue Montreal-Book'; /* Ensures consistency with your font */
+}
+
+.fig-link {
+    text-decoration: none;
+    color: inherit;  /* Keeps the same color as the surrounding text */
+    cursor: pointer;
+}
+
+.equation{
+    font-family: 'Neue Montreal-Book Italic';
+}

@@ -1,0 +1,241 @@
+/* Import Custom Fonts */
+@font-face {
+    font-family: 'Neue Montreal-Book';
+    src: url('../../asset/font/PPNeueMontreal-Book.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Neue Montreal-Book Italic';
+    src: url('../../asset/font/PPNeueMontreal-BookItalic.woff') format('woff');
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: white;
+    font-family: 'Neue Montreal-Book', sans-serif;
+    overflow-x: hidden;
+    padding: 0 2vw;
+        overflow-y: hidden;
+    
+}
+
+/* Fixed Yellow Side Lines */
+.fixed-lines {
+    position: fixed;
+    top: 0;
+    left: 1.5vw;
+    width: 0.18vw;
+    height: 100vh;
+    background: #FDDD1C;
+    z-index: 20; /* Increased to ensure it stays above other elements */
+}
+
+.fixed-lines::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    right: 1.5vw;
+    width: 0.18vw;
+    height: 100vh;
+    background: #FDDD1C;
+    z-index: 20; /* Increased to ensure it stays above other elements */
+}
+
+
+/* Fixed Header */
+header {
+    position: absolute;
+    top: 1vw;
+    width: calc(100% - 3vw);
+    left: 1.5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1vw;
+    z-index: 10;
+}
+
+
+/* Custom Icon Styling */
+.icon {
+    display: flex;
+    position: relative;
+    width: 3vw;
+    height: 3.5vw;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.5vw;
+}
+
+/* General Bar Styling */
+.bar {
+    width: 0.18vw;
+    height: 1.3vw;
+    background: #FDDD1C;
+    position: absolute;
+}
+
+/* Row 1 - Top Bar */
+.row-1 {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Row 2 - Two Bars */
+.row-2:nth-child(2) {
+    top: 1.2vw;
+    left: 25%;
+}
+
+.row-2:nth-child(3) {
+    top: 1.2vw;
+    right: 25%;
+}
+
+/* Row 3 - Three Bars */
+.row-3:nth-child(4) {
+    top: 2.4vw;
+    left: 0%;
+}
+
+.row-3:nth-child(5) {
+    top: 2.4vw;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.row-3:nth-child(6) {
+    top: 2.4vw;
+    right: 0%;
+}
+
+.about {
+    font-size: 1.78vw;
+    color: #FDDD1C;
+    margin-left: 0.5vw;
+}
+
+/* Grid Layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Evenly divide into 3 columns */
+    gap: 2vw;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 6vw;
+    box-sizing: border-box;
+    height: auto;
+    align-items: start;
+}
+
+/* Left Column: Scrollable Body Text */
+.body-text {
+    grid-column: 1 / 2;   /* Occupies the first column */
+    font-size: 1.4vw;
+    line-height: 2vw;
+    color: black;
+    text-align: left;
+    padding: 1.5vw;
+    scrollbar-width: none; 
+    -ms-overflow-style: none;
+    overflow-x: hidden;
+    hyphens: auto; 
+    overflow-y: auto; /* Make the text scrollable */
+    max-height: calc(100vh - 6vw); /* Adjust max height */
+}
+
+.body-text::-webkit-scrollbar {
+    display: none;
+}
+
+.heading {
+    text-transform: uppercase;
+    font-family: 'Neue Montreal-Book';
+}
+
+/* Center Column: Image */
+.image {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 16vw;
+    width: auto;
+    z-index: -1;
+}
+
+.image img {
+    height: 100%;  /* Fixed height */
+    width: auto;   /* Maintain aspect ratio */
+    object-fit: contain;
+    display: block;
+    padding:1vw;
+}
+
+/* Right Column: Image Caption */
+.image-caption {
+    grid-column: 3 / 4;
+    overflow-y: auto;
+    font-size: 1.4vw;
+    line-height: 2vw;
+    text-align: left;
+    padding: 1.5vw;
+    box-sizing: border-box;
+    max-height: 100vh;
+    background: white;
+    display: block;   /* Change to block for inline text flow */
+    hyphens: auto;
+}
+
+.fig-number {
+    display: inline;  /* Make fig number inline */
+    margin-right: 0.5vw; /* Adjust spacing */
+    color: #FDDD1C;
+}
+
+.caption-text {
+    display: inline;  /* Make caption text inline */
+}
+
+
+/* Fixed Yellow Divider Lines */
+.left-divider {
+    position: fixed;
+    top: 0;
+    left: 33.33%;
+    transform: translateX(-50%);
+    width: 0.18vw;
+    height: 100vh;
+    background: #FDDD1C;
+    z-index: 5;
+}
+
+.right-divider {
+    position: fixed;
+    top: 0;
+    left: 66.66%;
+    transform: translateX(-50%);
+    width: 0.18vw;
+    height: 100vh;
+    background: #FDDD1C;
+    z-index: 5;
+}
+
+
+/* Link Styling */
+.fig-link {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.equation {
+    font-family: 'Neue Montreal-Book Italic';
+}
