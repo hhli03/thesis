@@ -146,7 +146,9 @@ header {
 
 /* Styling FIG Number */
 .fig-number {
-    color: #FDDD1C; /* Yellow color for FIG number */
+    color: #FDDD1C;
+    display: inline;
+    margin-right: 0.1em;  /* Adjust the spacing as needed */
 }
 
 /* Styling Caption Text */

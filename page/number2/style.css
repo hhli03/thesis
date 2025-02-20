@@ -166,6 +166,8 @@ header {
 /* FIG Number */
 .fig-number {
     color: #FDDD1C;
+    display: inline;
+    margin-right: 0.1em;  /* Adjust the spacing as needed */
 }
 
 /* Image (Centered on Page) */
