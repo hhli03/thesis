@@ -117,7 +117,7 @@ header {
 }
 
 .about {
-    font-size: 1.78vw;
+    font-size: 1.9vw;
     color: #FDDD1C;
     margin-left: 0.5vw;
 }
@@ -138,7 +138,7 @@ header {
 /* Left Column: Scrollable Body Text */
 .body-text {
     grid-column: 1 / 2;   /* Occupies the first column */
-    font-size: 1.4vw;
+    font-size: 1.5vw;
     line-height: 2vw;
     color: black;
     text-align: left;
@@ -157,7 +157,6 @@ header {
 
 .heading {
     text-transform: uppercase;
-    font-family: 'Neue Montreal-Book';
 }
 
 /* Center Column: Image */
@@ -183,7 +182,7 @@ header {
 .image-caption {
     grid-column: 3 / 4;
     overflow-y: auto;
-    font-size: 1.4vw;
+    font-size: 1.5vw;
     line-height: 2vw;
     text-align: left;
     padding: 1.3vw;

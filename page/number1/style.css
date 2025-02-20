@@ -60,7 +60,7 @@ header {
 /* About Section */
 .about {
     font-family: 'Neue Montreal-Book';
-    font-size: 1.78vw;
+    font-size: 1.9vw;
     color: #FDDD1C;
     margin-left: 0.5vw;
 }
@@ -133,12 +133,12 @@ header {
 
 /* Image Caption */
 .image-caption {
-    font-size: 1.78vw;
+    font-size: 1.9vw;
+    line-height: 2.6vw;
     font-family: 'Neue Montreal-Book';
     text-align: center;
     width: 100%;
     display: inline-block;
-    line-height: 2.6vw;
     position: relative;
     margin-top: 1.5vw; /* Adds space between image and caption */
 }
@@ -174,7 +174,7 @@ header {
 }
 
 .body-text {
-    font-size: 1.78vw;
+    font-size: 1.9vw;
     line-height: 2.6vw;
     color: black;
     text-align: left;
@@ -187,11 +187,6 @@ header {
 .heading {
     text-transform: uppercase; /* Converts text to ALL CAPS */
     font-family: 'Neue Montreal-Book'; /* Ensures consistency with your font */
-    font-size: 1.78vw; /* Adjust size as needed */
-}
-
-.equation{
-    font-family: 'Neue Montreal-Book Italic';
 }
 
 .fig-link {

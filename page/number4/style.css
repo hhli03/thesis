@@ -116,7 +116,7 @@ header {
 }
 
 .about {
-    font-size: 1.78vw;
+    font-size: 1.9vw;
     color: #FDDD1C;
     margin-left: 0.5vw;
 }
@@ -136,7 +136,7 @@ header {
 .body-text {
     grid-column: 1 / 2;
     font-size: 1.4vw;
-    line-height: 2vw;
+    line-height: 1.8vw;
     color: black;
     text-align: left;
     padding: 1.3vw;
@@ -181,12 +181,6 @@ header {
     display: inline;
 }
 
-
-
-
-.equation {
-    font-family: 'Neue Montreal-Book Italic';
-}
 
 .image {
     position: fixed;
@@ -246,5 +240,4 @@ header {
 
 .heading {
     text-transform: uppercase;
-    font-family: 'Neue Montreal-Book';
 }
