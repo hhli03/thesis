@@ -163,12 +163,7 @@ header {
     max-height: calc(100vh - 6vw); /* Align with body-text */
 }
 
-/* FIG Number */
-.fig-number {
-    color: #FDDD1C;
-    display: inline;
-    margin-right: 0.1em;  /* Adjust the spacing as needed */
-}
+
 
 /* Image (Centered on Page) */
 
@@ -210,8 +205,12 @@ header {
 
 .fig-link {
     text-decoration: none;
-    color: inherit;  /* Keeps the same color as the surrounding text */
     cursor: pointer;
+}
+
+.fig-number {
+    display: inline;
+    color: #FDDD1C;
 }
 
 .equation{

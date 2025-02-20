@@ -869,3 +869,25 @@ header {
     object-fit: contain;
     display: block;
 }
+
+
+.carousel[data-images="6"] .carousel-track a {
+    display: block;
+    width: 16.66%;
+    height: 16vw;
+    flex-shrink: 0; /* Prevents shrinking */
+    padding-right: 0vw;
+    padding-left: 0vw;
+    padding-top: 0.2vw;
+    padding-bottom: 0.2vw;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+    overflow: hidden; /* Prevents overflow */
+}
+
+
+.carousel[data-images="6"] .carousel-track a img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}

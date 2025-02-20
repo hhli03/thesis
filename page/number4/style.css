@@ -168,9 +168,13 @@ header {
     overflow-y: auto;
 }
 
+.fig-link {
+    text-decoration: none;
+    cursor: pointer;
+}
+
 .fig-number {
     display: inline;
-    margin-right: 0.5vw;
     color: #FDDD1C;
 }
 
@@ -180,12 +184,6 @@ header {
 
 
 
-/* Link Styling */
-.fig-link {
-    text-decoration: none;
-    color: inherit;
-    cursor: pointer;
-}
 
 .equation {
     font-family: 'Neue Montreal-Book Italic';
@@ -199,11 +197,12 @@ header {
     height: 16vw;
     width: auto;
     z-index: -1;
+    padding:1vw;
 }
 
 .image img {
     height: 100%;  /* Fixed height */
-    width: auto;   /* Maintain aspect ratio */
+    width: 100%;   /* Maintain aspect ratio */
     object-fit: contain;
     display: block;
     padding:1vw;

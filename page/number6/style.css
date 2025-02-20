@@ -124,7 +124,7 @@ header {
 
 .grid-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /* 5 Equal Columns */
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; /* 6 Equal Columns */
     gap: 2vw;
     width: 100%;
     margin: 0 auto;
@@ -137,8 +137,8 @@ header {
 /* Left Column: Scrollable Body Text */
 .body-text {
     grid-column: 1 / 2;
-    font-size: 1.2vw;
-    line-height: 1.5vw;
+    font-size: 1.1vw;
+    line-height: 1.4vw;
     color: black;
     text-align: left;
     padding: 1.5vw;
@@ -154,19 +154,20 @@ header {
     display: none;
 }
 
+/* Centered Fixed Image */
 .image {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 16vw;   /* Fixed height */
-    width: auto;
+    height: auto;
+    width: 14vw;
     z-index: -1;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;   /* Ensures no overflow */
-    padding:1vw;
+    overflow: hidden;
+    padding:2vw;
 }
 
 .image img {
@@ -178,12 +179,11 @@ header {
     display: block;
 }
 
-
 /* Right Column: Fixed Image Caption */
 .image-caption {
-    grid-column: 5 / 6;
-    font-size: 1.2vw;
-    line-height: 1.5vw;
+    grid-column: 6 / 7;
+    font-size: 1.1vw;
+    line-height: 1.4vw;
     text-align: left;
     padding: 1.5vw;
     box-sizing: border-box;
@@ -194,63 +194,67 @@ header {
     overflow-y: auto;
 }
 
-/* Divider Lines for 5 Columns */
+/* Divider Lines for 6 Columns */
 .column-divider-1 {
     position: fixed;
     top: 0;
-    left: 20%;
+    left: 16.66%;
     transform: translateX(-50%);
     width: 0.18vw;
     height: 100vh;
     background: #FDDD1C;
     z-index: 5;
+    mix-blend-mode: multiply;
 }
 
 .column-divider-2 {
     position: fixed;
     top: 0;
-    left: 40%;
+    left: 33.33%;
     transform: translateX(-50%);
     width: 0.18vw;
     height: 100vh;
     background: #FDDD1C;
     z-index: 5;
+    mix-blend-mode: multiply;
 }
 
 .column-divider-3 {
     position: fixed;
     top: 0;
-    left: 60%;
+    left: 50%;
     transform: translateX(-50%);
     width: 0.18vw;
     height: 100vh;
     background: #FDDD1C;
     z-index: 5;
+    mix-blend-mode: multiply;
 }
 
 .column-divider-4 {
     position: fixed;
     top: 0;
-    left: 80%;
+    left: 66.66%;
     transform: translateX(-50%);
     width: 0.18vw;
     height: 100vh;
     background: #FDDD1C;
     z-index: 5;
+    mix-blend-mode: multiply;
 }
 
-
-
-.equation {
-    font-family: 'Neue Montreal-Book Italic';
+.column-divider-5 {
+    position: fixed;
+    top: 0;
+    left: 83.33%;
+    transform: translateX(-50%);
+    width: 0.18vw;
+    height: 100vh;
+    background: #FDDD1C;
+    z-index: 5;
+    mix-blend-mode: multiply;
 }
 
-.heading {
-    text-transform: uppercase;
-    font-family: 'Neue Montreal-Book';
-}
-
-/* Link Styling */
 .fig-link {
     text-decoration: none;
     cursor: pointer;
@@ -265,3 +269,7 @@ header {
     display: inline;
 }
 
+.heading {
+    text-transform: uppercase;
+    font-family: 'Neue Montreal-Book';
+}

@@ -194,11 +194,6 @@ header {
     hyphens: auto;
 }
 
-.fig-number {
-    display: inline;  /* Make fig number inline */
-    margin-right: 0.5vw; /* Adjust spacing */
-    color: #FDDD1C;
-}
 
 .caption-text {
     display: inline;  /* Make caption text inline */
@@ -231,13 +226,16 @@ header {
 }
 
 
-/* Link Styling */
+.equation {
+    font-family: 'Neue Montreal-Book Italic';
+}
+
 .fig-link {
     text-decoration: none;
-    color: inherit;
     cursor: pointer;
 }
 
-.equation {
-    font-family: 'Neue Montreal-Book Italic';
+.fig-number {
+    display: inline;
+    color: #FDDD1C;
 }
