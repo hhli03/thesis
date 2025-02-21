@@ -218,7 +218,7 @@ header {
     display: block;
     hyphens: auto;
     overflow-y: auto;
-    padding-top: 7vw; /* Start 6vw lower */
+    padding-top: 7vw;
 }
 
 /* Divider Lines for 7 Columns */
@@ -307,4 +307,21 @@ header {
 .heading {
     text-transform: uppercase;
     font-family: 'Neue Montreal-Book';
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 1.3vw;
+    right: 2.8vw;
+    font-size: 2.5vw;
+    color: #FDDD1C; /* Yellow Color for Arrow */
+    background: transparent; /* No Background */
+    border: none;
+    cursor: pointer;
+    z-index: 100;
+    transition: transform 0.3s;
+}
+.scroll-to-top.show {
+    opacity: 1;
+    pointer-events: auto;
 }
