@@ -50,16 +50,12 @@ document.addEventListener("DOMContentLoaded", function () {
         window.addEventListener("resize", updateCarousel);
     });
 
-    // Scroll to Top on Icon Click
+    // Scroll to Top and Refresh Page on Icon Click
     const icon = document.querySelector('.icon');
     if (icon) {
         icon.addEventListener('click', function() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'  // Smooth scrolling effect
-            });
+            window.scrollTo(0, 0);  // Scroll to the top instantly
+            location.reload();      // Refreshes the page
         });
     }
 });
-
-

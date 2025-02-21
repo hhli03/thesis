@@ -150,7 +150,7 @@ header {
 /* Ensure the track takes up full width and images slide properly */
 .carousel-track {
     display: flex;
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.1s ease-in-out;
     height: 100%;
     width: 100%; /* Ensures full width track */
 }
