@@ -21,7 +21,9 @@ body {
     font-family: 'Neue Montreal-Book';
     overflow-x: hidden;
     padding: 0 2vw; /* Fixed side spacing */
+    overflow-y: scroll; /* Enables scrolling */
 }
+
 
 /* Fixed Yellow Side Lines */
 .fixed-lines {
@@ -121,8 +123,6 @@ header {
 }
 
 
-
-
 .carousel-container {
     width: 100%;
     position: relative; /* Ensure absolute positioning works inside */
@@ -130,7 +130,7 @@ header {
     flex-direction: column;
     align-items: center; /* Keep carousels centered */
     gap: 1.5vw;
-    margin-top: 6vw;
+    margin-top: 7vw;
 }
 
 
