@@ -77,6 +77,7 @@ header {
     align-items: center;
     justify-content: center;
     margin-right: 0.5vw;
+    cursor:pointer;
 }
 
 /* General Bar Styling */

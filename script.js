@@ -49,4 +49,15 @@ document.addEventListener("DOMContentLoaded", function () {
         // Update carousel position on window resize
         window.addEventListener("resize", updateCarousel);
     });
+
+    // Scroll to Top on Icon Click
+    const icon = document.querySelector('.icon');
+    if (icon) {
+        icon.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'  // Smooth scrolling effect
+            });
+        });
+    }
 });
