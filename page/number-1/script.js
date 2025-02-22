@@ -18,3 +18,25 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const images = document.querySelectorAll(".image img");
+    const popup = document.createElement("div");
+    popup.classList.add("image-popup");
+    document.body.appendChild(popup);
+
+    images.forEach(image => {
+        image.addEventListener("click", function() {
+            const popupImage = document.createElement("img");
+            popupImage.src = this.src;
+            popup.innerHTML = "";
+            popup.appendChild(popupImage);
+            popup.classList.add("show");
+        });
+    });
+
+    popup.addEventListener("click", function() {
+        popup.classList.remove("show");
+    });
+});
+
