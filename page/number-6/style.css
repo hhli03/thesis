@@ -188,7 +188,7 @@ header {
     transform: translate(-50%, -50%);
     height: auto;
     width: 14vw;
-    z-index: -1;
+    z-index: 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -291,6 +291,11 @@ header {
     color: #FDDD1C;
 }
 
+.fig-link:hover .fig-number {
+    background:#FDDD1C;
+    color:white;
+}
+
 .caption-text {
     display: inline;
 }
@@ -315,4 +320,45 @@ header {
 .scroll-to-top.show {
     opacity: 1;
     pointer-events: auto;
+}
+
+
+/* Overlay Styles */
+.image-popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.85); /* Transparent White */
+    z-index: 1000;
+    cursor: pointer;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.image-popup.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.image-popup img {
+    max-width: auto;
+    max-height: 70vh;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    transform: scale(0.8);
+    opacity: 0;
+    border-radius: 0; /* No Border Radius */
+    display: block;
+}
+
+/* Popup Animation */
+.image-popup.show img {
+    transform: scale(1);
+    opacity: 1;
 }

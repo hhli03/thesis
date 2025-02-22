@@ -233,7 +233,8 @@ header {
 }
 
 .fig-link:hover .fig-number {
-    opacity: 60%;
+    background:#FDDD1C;
+    color:white;
 }
 
 .scroll-to-top {
@@ -253,7 +254,6 @@ header {
     pointer-events: auto;
 }
 
-/* Overlay Styles */
 /* Overlay Styles */
 .image-popup {
     display: flex;
@@ -279,8 +279,8 @@ header {
 }
 
 .image-popup img {
-    max-width: 85vw;
-    max-height: 85vh;
+    max-width: auto;
+    max-height: 70vh;
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
     transform: scale(0.8);
     opacity: 0;

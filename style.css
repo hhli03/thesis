@@ -979,9 +979,8 @@ header {
     position: absolute;
     background-color: white;
     color: #FDDD1C;
-    border: #FDDD1C 0.1vw solid;
-    padding: 0.15vw 0.45vw;
-    border-radius: 0.11vw;
+    border: #FDDD1C 0.11vw solid;
+    padding: 0.15vw 0.42vw;
     font-size: 1vw;
     pointer-events: none;
     white-space: nowrap;

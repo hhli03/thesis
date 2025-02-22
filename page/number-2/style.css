@@ -204,6 +204,7 @@ header {
     height: 16vw;
     width: auto;
     z-index: -1;
+    pointer-events: none;
 }
 
 .image img {
@@ -212,6 +213,8 @@ header {
     object-fit: contain;
     display: block;
     padding:1vw;
+    pointer-events: all;
+    transition: z-index 0.2s ease;
 }
 
 /* Fixed Yellow Center Divider Line */
@@ -241,6 +244,11 @@ header {
     color: #FDDD1C;
 }
 
+.fig-link:hover .fig-number {
+    background:#FDDD1C;
+    color:white;
+}
+
 .scroll-to-top {
     position: fixed;
     bottom: 1.3vw;
@@ -256,4 +264,51 @@ header {
 .scroll-to-top.show {
     opacity: 1;
     pointer-events: auto;
+}
+
+/* Overlay Styles */
+.clickable-image {
+    cursor: pointer;
+    z-index: 10; /* Ensure it's clickable */
+    position: relative;
+}
+
+/* Overlay Styles */
+.image-popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.85); /* Transparent White */
+    z-index: 1000;
+    cursor: pointer;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.image-popup.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.image-popup img {
+    max-width: 85vw;
+    max-height: 85vh;
+    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    transform: scale(0.8);
+    opacity: 0;
+    border-radius: 0; /* No Border Radius */
+    display: block;
+}
+
+/* Popup Animation */
+.image-popup.show img {
+    transform: scale(1);
+    opacity: 1;
 }
