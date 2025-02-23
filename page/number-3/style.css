@@ -261,11 +261,12 @@ header {
 .fig-number {
     display: inline;
     color: #FDDD1C;
+    transition: background 0.1s ease-out, color 0.1s ease-out;
 }
 
 .fig-link:hover .fig-number {
-    background:#FDDD1C;
-    color:white;
+    background: #FDDD1C;
+    color: white;
 }
 
 .scroll-to-top {

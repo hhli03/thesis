@@ -230,13 +230,14 @@ header {
 .fig-number {
     display: inline;
     color: #FDDD1C;
-    scroll-margin-top: 7vw; /* Same as your fixed padding-top */
+    transition: background 0.1s ease-out, color 0.1s ease-out;
 }
 
 .fig-link:hover .fig-number {
-    background:#FDDD1C;
-    color:white;
+    background: #FDDD1C;
+    color: white;
 }
+
 
 .scroll-to-top {
     position: fixed;
