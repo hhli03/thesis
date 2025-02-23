@@ -290,10 +290,8 @@ header {
 /* Hover effect */
 .prev:hover, .next:hover {
     color: #FDDD1C; /* White arrow color on hover */
-    transition: transform 0.3s ease-in-out;
+    transition: background 0.2s ease-in-out;
 }
-
-
 
 
 /* Divider for Row 2 (1 center line) */
@@ -977,8 +975,9 @@ header {
 /* Floating label for fig numbers */
 .fig-label {
     position: absolute;
-    background-color: #FDDD1C;
-    color: white;
+    background-color: white;
+    color: #FDDD1C;
+    border:#FDDD1C 0.11vw solid;
     padding: 0.15vw 0.42vw;
     font-size: 1vw;
     pointer-events: none;
