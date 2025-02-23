@@ -199,6 +199,7 @@ header {
     object-fit: contain;
     display: block;
     padding:1vw;
+    cursor: zoom-in;
 }
 
 /* Right Column: Image Caption */

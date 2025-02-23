@@ -176,47 +176,6 @@ header {
 }
 
 
-/* Image Caption */
-.image-caption {
-    font-size: 1.7vw;
-    line-height: 2.3vw;
-    color: black;
-    text-align: left;
-    width: 100%;
-    padding: 1.3vw;
-    padding-top: 7vw;  /* Space before the text */
-    overflow-y: auto; /* Allow scrolling */
-    height: 100%;  /* Full height */
-    box-sizing: border-box;
-    margin: 0;
-}
-
-
-
-
-/* Image (Centered on Page) */
-
-.image {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 16vw;
-    width: auto;
-    z-index: -1;
-    pointer-events: none;
-}
-
-.image img {
-    height: 100%;  /* Fixed height */
-    width: auto;   /* Maintain aspect ratio */
-    object-fit: contain;
-    display: block;
-    padding:1vw;
-    pointer-events: all;
-    transition: z-index 0.2s ease;
-}
-
 /* Fixed Yellow Center Divider Line */
 .center-divider {
     position: fixed;
@@ -298,8 +257,7 @@ header {
 }
 
 .image-popup img {
-    max-width: 85vw;
-    max-height: 85vh;
+    max-height: 70vh;
     transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
     transform: scale(0.8);
     opacity: 0;
@@ -311,4 +269,54 @@ header {
 .image-popup.show img {
     transform: scale(1);
     opacity: 1;
+}
+/* Image Container: Flex Column Layout */
+.image-container {
+    display: flex;
+    flex-direction: column; /* Stack image and caption */
+    gap: 3vw;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 1.3vw;
+    padding-top: 7vw;
+    margin: 0;
+}
+
+/* Image */
+.image {
+    width: 100%;
+    max-height: 24vw;
+    overflow: hidden;
+    justify-self: start;
+    align-self: start;
+    position: relative;
+    z-index: 1;
+    pointer-events: all;
+    margin: 0;
+    padding: 0;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+    max-height: 24vw; /* Maximum height for the image */
+    object-fit: contain;
+    display: block;
+    cursor: zoom-in;
+    transition: transform 0.3s ease;
+    margin: 0;
+    padding: 0;
+}
+
+/* Image Caption */
+.image-caption {
+    text-align: left;
+    color: black;
+    hyphens: auto;
+    font-size: 1.6vw;
+    line-height: 2.1vw;
+    width: 100%;
+    padding: 0;
+    margin: 0;
 }

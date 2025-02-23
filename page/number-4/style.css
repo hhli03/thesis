@@ -228,6 +228,7 @@ header {
     object-fit: contain;
     display: block;
     padding:1vw;
+    cursor: zoom-in;
 }
 
 /* Divider Lines for 4 Columns */
