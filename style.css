@@ -977,16 +977,15 @@ header {
 /* Floating label for fig numbers */
 .fig-label {
     position: absolute;
-    background-color: white;
-    color: #FDDD1C;
-    border: #FDDD1C 0.11vw solid;
+    background-color: #FDDD1C;
+    color: white;
     padding: 0.15vw 0.42vw;
     font-size: 1vw;
     pointer-events: none;
     white-space: nowrap;
     display: none;
     z-index: 999;
-    transform: translate(20%, 20%); /* Move to bottom right corner */
+    transform: translate(10%, 10%); /* Move to bottom right corner */
     font-family: 'Neue Montreal-Book';
 }
 

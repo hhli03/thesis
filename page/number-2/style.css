@@ -167,7 +167,7 @@ header {
     padding: 1.3vw;
     padding-top: 7vw; /* Space before the text */
     box-sizing: border-box;
-    scroll-padding-top: 7vw; /* Smooth scroll start after 6vw */
+    scroll-padding-top: 7vw; 
     margin: 0;  /* Remove any default margin */
 }
 

@@ -214,6 +214,7 @@ header {
     word-wrap: break-word;
     padding: 1.3vw;
     box-sizing: border-box;
+    scroll-padding-top: 7vw; 
 }
 
 
@@ -231,11 +232,17 @@ header {
     display: inline;
     color: #FDDD1C;
     transition: background 0.1s ease-out, color 0.1s ease-out;
+    scroll-padding-top: 7vw; 
 }
 
 .fig-link:hover .fig-number {
     background: #FDDD1C;
     color: white;
+}
+
+/* Apply scroll-margin-top to all anchor targets */
+[id^="fig-"] {
+    scroll-margin-top: 7vw;
 }
 
 
