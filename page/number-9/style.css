@@ -371,8 +371,6 @@ header {
     width: 100vw;
     height: 100vh;
     background: rgba(255, 255, 255, 0.85); /* Transparent White */
-    backdrop-filter: blur(0.4em); /* Blur relative to the font size */
-    -webkit-backdrop-filter: blur(0.4em);
     z-index: 1000;
     cursor: pointer;
     overflow: hidden;
