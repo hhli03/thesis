@@ -361,7 +361,6 @@ header {
 .grid-container {
     display: flex;
     flex-direction: column;
-    overflow-y: auto;
     height: 100vh;
     padding: 0;
     padding-top: 15vw;
@@ -369,6 +368,14 @@ header {
     gap: 3vw;
     position: relative;
     z-index: 1;  /* Below gradient */
+    scroll-padding-top: 15vw; 
+    overflow-y: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.grid-container::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari, and Opera */
 }
 
 /* Fixed Lines - Ensure Visibility */
@@ -415,6 +422,7 @@ header {
         overflow: visible;
         margin: 0 auto;
         box-sizing: border-box;
+        padding:3vw;
     }
     
     /* Actual Image - Override All Styles */
@@ -515,7 +523,7 @@ header {
     }
 
     .center-divider {
-        width: 0.5vw;
+        width: 0.45vw;
         z-index: 30; /* Increased to be above gradient and header */
     }
     
