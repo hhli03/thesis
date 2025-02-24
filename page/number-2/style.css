@@ -463,14 +463,14 @@ header {
 
     /* Icon - Bigger Size */
     .icon {
-        width: 8vw;   /* Increased Width */
-        height: 8vw;  /* Increased Height */
+        width: 9.5vw;   /* Increased Width */
+        height: 9vw;  /* Increased Height */
     }
 
     /* General Bar Styling - Adjusted for Larger Icon */
     .bar {
         width: 0.5vw;  /* Slightly Thicker Bars */
-        height: 3vw;   /* Adjusted Height for Proportions */
+        height: 4vw;   /* Adjusted Height for Proportions */
     }
 
     .scroll-to-top {
@@ -478,8 +478,6 @@ header {
         font-size: 4.5vw;
         right: 5vw;
     }
-
-    
 
         /* Row 1 - Top Bar */
     .row-1 {
@@ -490,29 +488,29 @@ header {
 
     /* Row 2 - Two Bars */
     .row-2:nth-child(2) {
-        top: 3vw;
+        top: 4vw;
         left: 25%;
     }
 
     .row-2:nth-child(3) {
-        top: 3vw;
+        top: 4vw;
         right: 25%;
     }
 
     /* Row 3 - Three Bars */
     .row-3:nth-child(4) {
-        top: 6vw;
+        top: 8vw;
         left: 0%;
     }
 
     .row-3:nth-child(5) {
-        top: 6vw;
+        top: 8vw;
         left: 50%;
         transform: translateX(-50%);
     }
 
     .row-3:nth-child(6) {
-        top: 6vw;
+        top: 8vw;
         right: 0%;
     }
 
