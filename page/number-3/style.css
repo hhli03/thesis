@@ -161,7 +161,7 @@ header {
 .body-text {
     grid-column: 1 / 2;   /* Occupies the first column */
     font-size: 1.5vw;
-    line-height: 2vw;
+    line-height: 1.9vw;
     color: black;
     text-align: left;
     padding: 1.3vw;
@@ -207,7 +207,7 @@ header {
     grid-column: 3 / 4;
     overflow-y: auto;
     font-size: 1.5vw;
-    line-height: 2vw;
+    line-height: 1.9vw;
     text-align: left;
     padding: 1.3vw;
     padding-top: 7vw; /* Space before the text */

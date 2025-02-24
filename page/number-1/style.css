@@ -193,7 +193,7 @@ header {
 /* Image Caption */
 .image-caption {
     font-size: 1.9vw;
-    line-height: 2.6vw;
+    line-height: 2.4vw;
     text-align: center;
     width: 100%;
     padding: 1vw;
@@ -206,7 +206,7 @@ header {
 
 .body-text {
     font-size: 1.9vw;
-    line-height: 2.6vw;
+    line-height: 2.4vw;
     color: black;
     text-align: left;
     width: 100%;

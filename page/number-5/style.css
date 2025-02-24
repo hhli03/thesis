@@ -159,7 +159,7 @@ header {
 .body-text {
     grid-column: 1 / 2;
     font-size: 1.2vw;
-    line-height: 1.5vw;
+    line-height: 1.4vw;
     color: black;
     text-align: left;
     padding: 1.3vw;
@@ -208,7 +208,7 @@ header {
 .image-caption {
     grid-column: 5 / 6;
     font-size: 1.2vw;
-    line-height: 1.5vw;
+    line-height: 1.4vw;
     text-align: left;
     padding: 1.3vw;
     padding-top: 7vw; /* Start 6vw lower */

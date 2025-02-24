@@ -157,7 +157,7 @@ header {
 /* Body Text */
 .body-text {
     font-size: 1.7vw;
-    line-height: 2.3vw;
+    line-height: 2.1vw;
     color: black;
     text-align: left;
     hyphens: auto;
@@ -315,7 +315,7 @@ header {
     text-align: left;
     color: black;
     hyphens: auto;
-    font-size: 1.6vw;
+    font-size: 1.7vw;
     line-height: 2.1vw;
     width: 100%;
     padding: 0;

@@ -160,7 +160,7 @@ header {
 .body-text {
     grid-column: 1 / 2;
     font-size: 1vw;
-    line-height: 1.3vw;
+    line-height: 1.2vw;
     color: black;
     text-align: left;
     padding: 1.3vw;
@@ -210,7 +210,7 @@ header {
 .image-caption {
     grid-column: 7 / 8;
     font-size: 1vw;
-    line-height: 1.3vw;
+    line-height: 1.2vw;
     text-align: left;
     padding: 1.3vw;
     box-sizing: border-box;
