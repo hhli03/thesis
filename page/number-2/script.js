@@ -1,53 +1,46 @@
 document.addEventListener("DOMContentLoaded", function () {
     const scrollToTopButton = document.querySelector('.scroll-to-top');
     const bodyText = document.querySelector('.body-text');
+    const gridContainer = document.querySelector('.grid-container');
 
-    // Show the button when scrolling down
-    bodyText.addEventListener('scroll', function() {
-        if (bodyText.scrollTop > 300) {  // Adjust this value to control when it appears
+    // Function to check scroll position and toggle button visibility
+    function checkScrollPosition(scrollElement) {
+        if (scrollElement.scrollTop > 300) {
             scrollToTopButton.classList.add('show');
         } else {
             scrollToTopButton.classList.remove('show');
         }
-    });
+    }
 
-    // Scroll back to top when button is clicked
-    scrollToTopButton.addEventListener('click', function() {
-        bodyText.scrollTo({
+    // Function to scroll to top smoothly
+    function scrollToTop(scrollElement) {
+        scrollElement.scrollTo({
             top: 0,
             behavior: 'smooth'
         });
-    });
-});
+    }
 
-document.addEventListener("DOMContentLoaded", function() {
-    const images = document.querySelectorAll(".image img");
-
-    images.forEach(image => {
-        image.addEventListener("mouseover", function() {
-            this.style.zIndex = "1000";  // Bring to front when hovering
-        });
-
-        image.addEventListener("mouseout", function() {
-            this.style.zIndex = "-1";  // Send back when not hovering
-        });
-
-        image.addEventListener("click", function() {
-            const popup = document.querySelector(".image-popup");
-            const popupImage = document.querySelector(".popup-image");
-
-            popupImage.src = this.src;
-            popup.classList.add("show");
-        });
-    });
-
-    const popup = document.querySelector(".image-popup");
-    const popupImage = document.querySelector(".popup-image");
-
-    popup.addEventListener("click", function(event) {
-        if (event.target !== popupImage) {
-            popup.classList.remove("show");
-            popupImage.src = ""; // Clear image source for better performance
+    // Event Listener for Scroll-to-Top Button
+    scrollToTopButton.addEventListener('click', function() {
+        if (window.innerWidth <= 768) {
+            // Mobile: Scroll .grid-container
+            scrollToTop(gridContainer);
+        } else {
+            // Desktop: Scroll .body-text
+            scrollToTop(bodyText);
         }
     });
+
+    // Event Listener for Scrolling
+    if (window.innerWidth <= 768) {
+        // Mobile: Listen to scroll event on .grid-container
+        gridContainer.addEventListener('scroll', function() {
+            checkScrollPosition(gridContainer);
+        });
+    } else {
+        // Desktop: Listen to scroll event on .body-text
+        bodyText.addEventListener('scroll', function() {
+            checkScrollPosition(bodyText);
+        });
+    }
 });

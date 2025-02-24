@@ -326,31 +326,88 @@ header {
 
 /* Responsive Layout for Mobile Devices */
 @media (max-width: 768px) {
-    /* Grid Container - Dismiss Grid and Stack in One Column */
-    .grid-container {
-        display: flex;
-        flex-direction: column;
-        overflow-y: auto;  /* Enable scrolling for the entire container */
-        height: 100vh;  /* Full viewport height */
-        padding: 0;
-        padding-top:15vw;
-        padding-bottom:3.5vw;
-        gap: 3vw;
-    }
+/* Gradient Overlay - Fixed at Top */
+.gradient-overlay {
+    width: 100vw;
+    height: 15vw;  /* Adjust height for better visibility */
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 1) 0%,       
+        rgba(255, 255, 255, 0.98) 20%,  
+        rgba(255, 255, 255, 0.9) 40%,    
+        rgba(255, 255, 255, 0.75) 60%,   
+        rgba(255, 255, 255, 0.5) 80%,    
+        rgba(255, 255, 255, 0) 100%      
+    );
+    z-index: 15;  /* Below header, above all other content */
+    display: block;
+}
+
+/* Header - Transparent Background */
+header {
+    position: fixed;
+    top: 0;
+    width: calc(100% - 4vw);
+    padding: 3vw 5vw;
+    z-index: 20;  /* Above gradient */
+    background: transparent; /* Transparent to show gradient */
+}
+
+/* Grid Container */
+.grid-container {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    height: 100vh;
+    padding: 0;
+    padding-top: 15vw;
+    padding-bottom: 3.5vw;
+    gap: 3vw;
+    position: relative;
+    z-index: 1;  /* Below gradient */
+}
+
+/* Fixed Lines - Ensure Visibility */
+.fixed-lines {
+    position: fixed;
+    top: 0;
+    left: 1.2vw;
+    width: 0.5vw;
+    height: 100vh;
+    background: #FDDD1C;
+    z-index: 25; /* Above gradient and header */
+}
+
+.fixed-lines::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    right: 1.3vw;
+    width: 0.5vw;
+    height: 100vh;
+    background: #FDDD1C;
+    z-index: 25; /* Above gradient and header */
+}
 
     /* Image Container - Ensure Image and Caption are on Top */
     .image-container {
         width: 100%;
         display: flex;
-        justify-content: center;  /* Center the image */
+        justify-content: center;
         align-items: center;
         padding: 0;
         margin: 0;
+        position: relative;
+        z-index: 1;
     }
-
+    
     /* Image Wrapper - Allow Image to Scale */
     .image {
-        width: 80% !important;      /* Occupy 90% of the screen width */
+        width: 90% !important;
         max-width: 90% !important;
         height: auto !important;
         max-height: none !important;
@@ -358,12 +415,11 @@ header {
         overflow: visible;
         margin: 0 auto;
         box-sizing: border-box;
-        padding: 0 3vw;
     }
-
+    
     /* Actual Image - Override All Styles */
     .image img {
-        width: 100% !important;     /* Ensure full width of parent */
+        width: 100% !important;
         max-width: 100% !important;
         height: auto !important;
         max-height: none !important;
@@ -372,16 +428,15 @@ header {
         margin: 0 auto;
         box-sizing: border-box;
     }
-
+    
     /* Disable Clickable Functionality */
     .clickable-image {
-        pointer-events: none;  /* Disable clicking */
-        cursor: default;       /* Remove pointer cursor */
+        pointer-events: none;
+        cursor: default;
     }
-
     .image-caption {
-        font-size: 5vw;
-        line-height: 6vw;
+        font-size: 4.5vw;
+        line-height: 5.5vw;
         margin-top: 2vw;
         padding: 0 5vw;
     }
@@ -389,8 +444,8 @@ header {
     /* Body Text - Move Below Image and Caption */
     .body-text {
         order: 2;  /* Display Body Text Below Image and Caption */
-        font-size: 5vw;
-        line-height: 6vw;
+        font-size: 4.5vw;
+        line-height: 5.5vw;
         padding: 0 5vw;
         margin-top: 4vw;
     }
@@ -399,11 +454,6 @@ header {
     .image-container, .body-text {
         overflow: visible;
         height: auto;
-    }
-
-    header {
-        padding: 3vw 5vw;
-        width: calc(100% - 4vw);  /* Adjusted to maintain spacing */
     }
 
     /* About Section - Bigger Font Size */
@@ -425,59 +475,50 @@ header {
 
     .scroll-to-top {
         bottom: 3.5vw;
-        font-size: 5vw;
+        font-size: 4.5vw;
         right: 5vw;
-
     }
 
-    /* Row 1 - Top Bar */
-.row-1 {
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-}
+    
 
-/* Row 2 - Two Bars */
-.row-2:nth-child(2) {
-    top: 3vw;
-    left: 25%;
-}
+        /* Row 1 - Top Bar */
+    .row-1 {
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 
-.row-2:nth-child(3) {
-    top: 3vw;
-    right: 25%;
-}
+    /* Row 2 - Two Bars */
+    .row-2:nth-child(2) {
+        top: 3vw;
+        left: 25%;
+    }
 
-/* Row 3 - Three Bars */
-.row-3:nth-child(4) {
-    top: 6vw;
-    left: 0%;
-}
+    .row-2:nth-child(3) {
+        top: 3vw;
+        right: 25%;
+    }
 
-.row-3:nth-child(5) {
-    top: 6vw;
-    left: 50%;
-    transform: translateX(-50%);
-}
+    /* Row 3 - Three Bars */
+    .row-3:nth-child(4) {
+        top: 6vw;
+        left: 0%;
+    }
 
-.row-3:nth-child(6) {
-    top: 6vw;
-    right: 0%;
-}
+    .row-3:nth-child(5) {
+        top: 6vw;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 
-.center-divider {
-    width: 0.5vw;
-}
-.fixed-lines {
-    left: 2vw;
-    width: 0.5vw;
-}
+    .row-3:nth-child(6) {
+        top: 6vw;
+        right: 0%;
+    }
 
-.fixed-lines::after {
-    width: 0.5vw;
-    right: 2vw;
-}
-
-
-
+    .center-divider {
+        width: 0.5vw;
+        z-index: 30; /* Increased to be above gradient and header */
+    }
+    
 }
