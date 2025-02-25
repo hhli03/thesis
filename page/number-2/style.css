@@ -423,15 +423,15 @@ header {
     
     /* Image Wrapper - Allow Image to Scale */
     .image {
-        width: 90% !important;
-        max-width: 90% !important;
+        width: 100% !important;
+        max-width: 100% !important;
         height: auto !important;
         max-height: none !important;
         display: block;
         overflow: visible;
         margin: 0 auto;
         box-sizing: border-box;
-        padding:3vw;
+        padding:2vw 8vw;
     }
     
     /* Actual Image - Override All Styles */
