@@ -1,23 +1,49 @@
 document.addEventListener("DOMContentLoaded", function () {
     const scrollToTopButton = document.querySelector('.scroll-to-top');
+    const bodyText = document.querySelector('.body-text');
 
-    // Show the button when scrolling down
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 300) {  // Checks the scroll position of the window
-            scrollToTopButton.classList.add('show');
+    // Function to check the scroll position and toggle the button visibility
+    function toggleScrollButton() {
+        // Check if the user is on mobile or desktop
+        if (window.innerWidth <= 768) {
+            // For mobile: Use window scroll instead of bodyText
+            if (window.scrollY > 300) {
+                scrollToTopButton.classList.add('show');
+            } else {
+                scrollToTopButton.classList.remove('show');
+            }
         } else {
-            scrollToTopButton.classList.remove('show');
+            // For desktop: Use bodyText scroll
+            if (bodyText.scrollTop > 300) {
+                scrollToTopButton.classList.add('show');
+            } else {
+                scrollToTopButton.classList.remove('show');
+            }
         }
-    });
+    }
+
+    // Check scroll on both bodyText and window
+    bodyText.addEventListener('scroll', toggleScrollButton);
+    window.addEventListener('scroll', toggleScrollButton);
 
     // Scroll back to top when button is clicked
     scrollToTopButton.addEventListener('click', function() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
+        if (window.innerWidth <= 768) {
+            // For mobile: Scroll window to top
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        } else {
+            // For desktop: Scroll bodyText to top
+            bodyText.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
     });
 });
+
 
 
 
@@ -62,18 +88,31 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // Check if the text overflows the container
             if (isOverflowing(subHeading)) {
-                // Calculate the character count and split point
+                // Calculate the character count and midpoint
                 const totalChars = originalText.length;
-                const breakPoint = Math.ceil(totalChars / 2);
+                const midPoint = Math.ceil(totalChars / 2);
 
                 // Find the nearest space to break at the midpoint
-                let splitIndex = breakPoint;
-                while (splitIndex > 0 && originalText[splitIndex] !== ' ') {
-                    splitIndex--;
+                let splitIndex = midPoint;
+                let leftIndex = midPoint;
+                let rightIndex = midPoint;
+
+                // Search for space on both sides of the midpoint
+                while (leftIndex > 0 || rightIndex < totalChars) {
+                    if (originalText[leftIndex] === ' ') {
+                        splitIndex = leftIndex;
+                        break;
+                    }
+                    if (originalText[rightIndex] === ' ') {
+                        splitIndex = rightIndex;
+                        break;
+                    }
+                    leftIndex--;
+                    rightIndex++;
                 }
 
-                // If no space found, force split at the midpoint
-                if (splitIndex === 0) splitIndex = breakPoint;
+                // If no space is found, force break at the midpoint
+                if (splitIndex === 0 || splitIndex === totalChars) splitIndex = midPoint;
 
                 // Split the text at the calculated point
                 const firstLine = originalText.slice(0, splitIndex).trim();
@@ -91,3 +130,4 @@ document.addEventListener('DOMContentLoaded', function () {
     // Recalculate on window resize
     window.addEventListener('resize', adjustSubHeadings);
 });
+

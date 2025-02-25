@@ -65,18 +65,31 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // Check if the text overflows the container
             if (isOverflowing(subHeading)) {
-                // Calculate the character count and split point
+                // Calculate the character count and midpoint
                 const totalChars = originalText.length;
-                const breakPoint = Math.ceil(totalChars / 2);
+                const midPoint = Math.ceil(totalChars / 2);
 
                 // Find the nearest space to break at the midpoint
-                let splitIndex = breakPoint;
-                while (splitIndex > 0 && originalText[splitIndex] !== ' ') {
-                    splitIndex--;
+                let splitIndex = midPoint;
+                let leftIndex = midPoint;
+                let rightIndex = midPoint;
+
+                // Search for space on both sides of the midpoint
+                while (leftIndex > 0 || rightIndex < totalChars) {
+                    if (originalText[leftIndex] === ' ') {
+                        splitIndex = leftIndex;
+                        break;
+                    }
+                    if (originalText[rightIndex] === ' ') {
+                        splitIndex = rightIndex;
+                        break;
+                    }
+                    leftIndex--;
+                    rightIndex++;
                 }
 
-                // If no space found, force split at the midpoint
-                if (splitIndex === 0) splitIndex = breakPoint;
+                // If no space is found, force break at the midpoint
+                if (splitIndex === 0 || splitIndex === totalChars) splitIndex = midPoint;
 
                 // Split the text at the calculated point
                 const firstLine = originalText.slice(0, splitIndex).trim();
