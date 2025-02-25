@@ -312,6 +312,7 @@ header {
     vertical-align: bottom; /* Aligns the bottom of the text */
 }
 
+
 @media (max-width: 768px) {
     .gradient-overlay {
         width: 100vw;

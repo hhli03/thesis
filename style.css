@@ -18,7 +18,6 @@ body {
     overflow-y: scroll; /* Enables scrolling */
 }
 
-
 /* Fixed Yellow Side Lines */
 .fixed-lines {
     position: fixed;
@@ -77,7 +76,6 @@ header {
     cursor: pointer;
 }
 
-
 /* General Bar Styling */
 .bar {
     width: 0.19vw;
@@ -120,7 +118,6 @@ header {
     top: 2.8vw;
     right: 0%;
 }
-
 
 .carousel-container {
     width: 100%;
@@ -180,7 +177,6 @@ header {
     padding-top:1vw;
     padding-bottom:1vw;
 }
-
 
 .carousel[data-images="3"] .carousel-track img {
     width: 33.33%;
@@ -290,7 +286,6 @@ header {
     color: #FDDD1C; /* White arrow color on hover */
     transition: background 0.2s ease-in-out;
 }
-
 
 /* Divider for Row 2 (1 center line) */
 .carousel[data-images="2"]::before {
@@ -798,9 +793,6 @@ header {
     cursor: pointer;
 }
 
-
-
-
 .carousel[data-images="2"] .carousel-track a {
     display: block;
     width: 50%;
@@ -820,7 +812,6 @@ header {
     object-fit: contain;
     display: block;
 }
-
 
 .carousel[data-images="3"] .carousel-track a {
     display: block;
@@ -855,14 +846,12 @@ header {
     overflow: hidden; /* Prevents overflow */
 }
 
-
 .carousel[data-images="4"] .carousel-track a img {
     width: 100%;
     height: 100%;
     object-fit: contain;
     display: block;
 }
-
 
 .carousel[data-images="5"] .carousel-track a {
     display: block;
@@ -877,14 +866,12 @@ header {
     overflow: hidden; /* Prevents overflow */
 }
 
-
 .carousel[data-images="5"] .carousel-track a img {
     width: 100%;
     height: 100%;
     object-fit: contain;
     display: block;
 }
-
 
 .carousel[data-images="6"] .carousel-track a {
     display: block;
@@ -898,7 +885,6 @@ header {
     box-sizing: border-box; /* Ensure padding is included in the width */
     overflow: hidden; /* Prevents overflow */
 }
-
 
 .carousel[data-images="6"] .carousel-track a img {
     width: 100%;
@@ -920,7 +906,6 @@ header {
     overflow: hidden; /* Prevents overflow */
 }
 
-
 .carousel[data-images="7"] .carousel-track a img {
     width: 100%;
     height: 100%;
@@ -941,7 +926,6 @@ header {
     overflow: hidden; /* Prevents overflow */
 }
 
-
 .carousel[data-images="8"] .carousel-track a img {
     width: 100%;
     height: 100%;
@@ -961,7 +945,6 @@ header {
     box-sizing: border-box; /* Ensure padding is included in the width */
     overflow: hidden; /* Prevents overflow */
 }
-
 
 .carousel[data-images="9"] .carousel-track a img {
     width: 100%;
@@ -986,3 +969,345 @@ header {
     font-family: 'Neue Montreal-Book';
 }
 
+
+@media (max-width: 768px) {
+    header {
+        position: fixed;
+        top: 0;
+        width: calc(100% - 4vw);
+        height:auto;
+        padding: 3vw 5vw;
+        z-index: 20;  /* Above gradient */
+        background: transparent; /* Transparent to show gradient */
+    }
+
+        /* About Section - Bigger Font Size */
+        .about {
+            font-size: 5vw;  /* Increased for better visibility */
+        }
+    
+        /* Icon - Bigger Size */
+        .icon {
+            width: 11.5vw;   /* Increased Width */
+            height: 15vw;  /* Increased Height */
+        }
+    
+        /* General Bar Styling - Adjusted for Larger Icon */
+        .bar {
+            width: 0.5vw;  /* Slightly Thicker Bars */
+            height: 5vw;   /* Adjusted Height for Proportions */
+        }
+    
+        .scroll-to-top {
+            bottom: 3.5vw;
+            font-size: 4.5vw;
+            right: 5vw;
+        }
+    
+            /* Row 1 - Top Bar */
+        .row-1 {
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    
+        /* Row 2 - Two Bars */
+        .row-2:nth-child(2) {
+            top: 4.5vw;
+            left: 25%;
+        }
+    
+        .row-2:nth-child(3) {
+            top: 4.5vw;
+            right: 25%;
+        }
+    
+        /* Row 3 - Three Bars */
+        .row-3:nth-child(4) {
+            top: 9vw;
+            left: 0%;
+        }
+    
+        .row-3:nth-child(5) {
+            top: 9vw;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    
+        .row-3:nth-child(6) {
+            top: 9vw;
+            right: 0%;
+        }
+        
+        .carousel-container {
+            margin-top: 20vw;
+        }
+
+        .carousel {
+            height: 25vw; /* Increase row height */
+        }
+
+        /* Larger prev/next buttons */
+        .prev, .next {
+            font-size: 3vw; /* Larger font */
+            width: 5vw; /* Larger width */
+            height: 5vw; /* Larger height */
+        }
+    
+        /* Larger figure label */
+        .fig-label {
+            font-size: 5vw; /* Larger font */
+            padding: 0.4vw 0.8vw;
+            border:#FDDD1C 0.45vw solid;
+        }
+        
+        .carousel-track img {
+            height: 25vw; /* Keeps height fixed */
+        }
+        
+        /* Row-specific widths */
+        .carousel[data-images="1"] .carousel-track img {
+            height: 25vw; /* Keeps height fixed */
+        }
+        
+        .carousel[data-images="2"] .carousel-track img {
+            height: 25vw; /* Keeps height fixed */
+            padding-right: 6vw; /* Adjust padding as needed */
+            padding-left: 6vw;
+        }
+        
+        .carousel[data-images="3"] .carousel-track img {
+            height: 25vw; /* Keeps height fixed */
+            padding-right: 5vw; /* Adjust padding as needed */
+            padding-left: 5vw;
+        }
+        
+        .carousel[data-images="4"] .carousel-track img {
+            height: 25vw; /* Keeps height fixed */
+            padding-right: 5vw; /* Adjust padding as needed */
+            padding-left: 5vw;
+        }
+        
+        .carousel[data-images="5"] .carousel-track img {
+            height: 25vw; /* Keeps height fixed */
+            padding-right: 5vw; /* Adjust padding as needed */
+            padding-left: 5vw;
+        }
+        
+        .carousel[data-images="6"] .carousel-track img {
+            height: 25vw; /* Keeps height fixed */
+            padding-right: 4.5vw; /* Adjust padding as needed */
+            padding-left: 4.5vw;
+        }
+        
+        .carousel[data-images="7"] .carousel-track img {
+            height: 25vw; /* Keeps height fixed */
+            padding-right: 4vw; /* Adjust padding as needed */
+            padding-left: 4vw;
+        }
+        
+        .carousel[data-images="8"] .carousel-track img {
+            height: 25vw; /* Keeps height fixed */
+            padding-right: 3.5vw; /* Adjust padding as needed */
+            padding-left: 3.5vw;
+
+        }
+        
+        .carousel[data-images="9"] .carousel-track img {
+            height: 25vw; /* Keeps height fixed */
+            padding-right: 3.5vw; /* Adjust padding as needed */
+            padding-left: 3.5vw;
+        }
+
+        .carousel[data-images="1"] .carousel-track a {
+            height: 25vw; /* Keeps height fixed */
+        }
+
+        .carousel[data-images="2"] .carousel-track a {
+            height: 25vw; /* Keeps height fixed */
+        }
+
+        .carousel[data-images="3"] .carousel-track a {
+            height: 25vw; /* Keeps height fixed */
+        }
+
+        .carousel[data-images="4"] .carousel-track a {
+            height: 25vw; /* Keeps height fixed */
+        }
+
+        .carousel[data-images="5"] .carousel-track a {
+            height: 25vw; /* Keeps height fixed */
+        }
+
+        .carousel[data-images="6"] .carousel-track a {
+            height: 25vw; /* Keeps height fixed */
+        }
+
+        .carousel[data-images="7"] .carousel-track a {
+            height: 25vw; /* Keeps height fixed */
+        }
+
+        .carousel[data-images="8"] .carousel-track a {
+            height: 25vw; /* Keeps height fixed */
+        }
+
+        .carousel[data-images="9"] .carousel-track a {
+            height: 25vw; /* Keeps height fixed */
+        }
+
+        /* Divider for Row 2 (1 center line) */
+        .carousel[data-images="2"]::before {
+            width: 0.5vw; /* Thin vertical line */
+        }
+
+        /* Dividers for Row 3 (2 evenly spaced lines) */
+        .carousel[data-images="3"]::before,
+        .carousel[data-images="3"]::after {
+            width: 0.5vw; /* Thin vertical line */
+        }
+
+        .carousel[data-images="3"]::before {
+            width: 0.5vw; /* Thin vertical line */
+        }
+
+        /* Dividers for Row 4 (3 evenly spaced lines) */
+        .carousel[data-images="4"]::before,
+        .carousel[data-images="4"]::after {
+            width: 0.5vw;
+        }
+
+        /* Third line for Row 4 (middle line at 50%) */
+        .carousel[data-images="4"] .divider-middle {
+            width: 0.5vw;
+        }
+
+        /* Dividers for Row 5 (4 evenly spaced lines) */
+        .carousel[data-images="5"]::before,
+        .carousel[data-images="5"]::after {
+            width: 0.5vw;
+        }
+
+        /* Second divider at 40% */
+        .carousel[data-images="5"] .divider-middle-1 {
+            width: 0.5vw;
+        }
+
+        /* Third divider at 60% */
+        .carousel[data-images="5"] .divider-middle-2 {
+            width: 0.5vw;
+        }
+
+        /* Dividers for Row 6 (5 evenly spaced lines) */
+        .carousel[data-images="6"]::before,
+        .carousel[data-images="6"]::after {
+            width: 0.5vw;
+        }
+
+        /* Second divider at 33.33% */
+        .carousel[data-images="6"] .divider-six-1 {
+            width: 0.5vw;
+        }
+
+        /* Third divider at 50% */
+        .carousel[data-images="6"] .divider-six-2 {
+            width: 0.5vw;
+        }
+
+        /* Fourth divider at 66.66% */
+        .carousel[data-images="6"] .divider-six-3 {
+            width: 0.5vw;
+        }
+
+        /* Dividers for Row 7 (6 evenly spaced lines) */
+        .carousel[data-images="7"]::before,
+        .carousel[data-images="7"]::after {
+            width: 0.5vw;
+        }
+
+        /* Second divider at 28.57% */
+        .carousel[data-images="7"] .divider-seven-1 {
+            width: 0.5vw;
+        }
+
+        /* Third divider at 42.85% */
+        .carousel[data-images="7"] .divider-seven-2 {
+            width: 0.5vw;
+        }
+
+        /* Fourth divider at 57.14% */
+        .carousel[data-images="7"] .divider-seven-3 {
+            width: 0.5vw;
+        }
+
+        /* Fifth divider at 71.42% */
+        .carousel[data-images="7"] .divider-seven-4 {
+            width: 0.5vw;
+        }
+
+        /* Dividers for Row 8 (7 evenly spaced lines) */
+        .carousel[data-images="8"]::before,
+        .carousel[data-images="8"]::after {
+            width: 0.5vw;
+        }
+
+        /* Second divider at 25% */
+        .carousel[data-images="8"] .divider-eight-1 {
+            width: 0.5vw;
+        }
+
+        /* Third divider at 37.5% */
+        .carousel[data-images="8"] .divider-eight-2 {
+            width: 0.5vw;
+        }
+
+        /* Fourth divider at 50% */
+        .carousel[data-images="8"] .divider-eight-3 {
+            width: 0.5vw;
+        }
+
+        /* Fifth divider at 62.5% */
+        .carousel[data-images="8"] .divider-eight-4 {
+            width: 0.5vw;
+        }
+
+        /* Sixth divider at 75% */
+        .carousel[data-images="8"] .divider-eight-5 {
+            width: 0.5vw;
+        }
+
+        /* Dividers for Row 9 (8 evenly spaced lines) */
+        .carousel[data-images="9"]::before,
+        .carousel[data-images="9"]::after {
+            width: 0.5vw;
+        }
+
+        /* Second divider at 22.22% */
+        .carousel[data-images="9"] .divider-nine-1 {
+            width: 0.5vw;
+        }
+
+        /* Third divider at 33.33% */
+        .carousel[data-images="9"] .divider-nine-2 {
+            width: 0.5vw;
+        }
+
+        /* Fourth divider at 44.44% */
+        .carousel[data-images="9"] .divider-nine-3 {
+            width: 0.5vw;
+        }
+
+        /* Fifth divider at 55.55% */
+        .carousel[data-images="9"] .divider-nine-4 {
+            width: 0.5vw;
+        }
+
+        /* Sixth divider at 66.66% */
+        .carousel[data-images="9"] .divider-nine-5 {
+            width: 0.5vw;
+        }
+
+        /* Seventh divider at 77.77% */
+        .carousel[data-images="9"] .divider-nine-6 {
+            width: 0.5vw;
+        }
+    }
