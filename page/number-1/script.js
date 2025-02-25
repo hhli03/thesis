@@ -1,49 +1,67 @@
 document.addEventListener("DOMContentLoaded", function () {
     const scrollToTopButton = document.querySelector('.scroll-to-top');
-    const bodyText = document.querySelector('.body-text');
-    const gridContainer = document.querySelector('.grid-container');
-
-    // Function to check scroll position and toggle button visibility
-    function checkScrollPosition(scrollElement) {
-        if (scrollElement.scrollTop > 300) {
+    
+    // Show the button when scrolling down
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) {  // Show after scrolling 300px
             scrollToTopButton.classList.add('show');
         } else {
             scrollToTopButton.classList.remove('show');
         }
-    }
+    });
 
-    // Function to scroll to top smoothly
-    function scrollToTop(scrollElement) {
-        scrollElement.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    }
-
-    // Event Listener for Scroll-to-Top Button
+    // Scroll back to top when button is clicked
     scrollToTopButton.addEventListener('click', function() {
         if (window.innerWidth <= 768) {
-            // Mobile: Scroll .grid-container
-            scrollToTop(gridContainer);
+            // On mobile, scroll the .grid-container to the top
+            const gridContainer = document.querySelector('.grid-container');
+            if (gridContainer) {
+                gridContainer.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            }
         } else {
-            // Desktop: Scroll .body-text
-            scrollToTop(bodyText);
+            // For desktop, scroll the window back to top
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         }
     });
 
-    // Event Listener for Scrolling
+    // Event Listener for Scrolling based on device size
     if (window.innerWidth <= 768) {
         // Mobile: Listen to scroll event on .grid-container
-        gridContainer.addEventListener('scroll', function() {
-            checkScrollPosition(gridContainer);
-        });
+        const gridContainer = document.querySelector('.grid-container');
+        if (gridContainer) {
+            gridContainer.addEventListener('scroll', function() {
+                checkScrollPosition(gridContainer);
+            });
+        }
     } else {
         // Desktop: Listen to scroll event on .body-text
-        bodyText.addEventListener('scroll', function() {
-            checkScrollPosition(bodyText);
-        });
+        const bodyText = document.querySelector('.body-text');
+        if (bodyText) {
+            bodyText.addEventListener('scroll', function() {
+                checkScrollPosition(bodyText);
+            });
+        }
     }
 });
+
+// Placeholder for checkScrollPosition function
+function checkScrollPosition(element) {
+    console.log(element.scrollTop); // Just for testing; replace with actual logic
+}
+
+
+// Your checkScrollPosition function needs to be defined somewhere
+function checkScrollPosition(element) {
+    console.log(element.scrollTop); // Just for testing; replace with actual logic
+}
+
+
 
 document.addEventListener("DOMContentLoaded", function() {
     const images = document.querySelectorAll(".image img");
@@ -65,6 +83,7 @@ document.addEventListener("DOMContentLoaded", function() {
         popup.classList.remove("show");
     });
 });
+
 
 document.addEventListener('DOMContentLoaded', function () {
     const subHeadings = document.querySelectorAll('.sub-heading');
