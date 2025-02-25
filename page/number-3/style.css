@@ -384,6 +384,7 @@ header {
             align-items: center;
             min-height: 100vh;
         scroll-padding-top: 20vw;
+        padding-bottom: 3.5vw;
     }
 
     /* Image Container - Goes First */
@@ -441,7 +442,7 @@ header {
         position: fixed;
         top: 0;
         left: 1.2vw;
-        width: 0.55vw;
+        width: 0.45vw;
         height: 100vh;
         background: #FDDD1C;
         z-index: 25;
@@ -452,7 +453,7 @@ header {
         position: fixed;
         top: 0;
         right: 1.3vw;
-        width: 0.55vw;
+        width: 0.45vw;
         height: 100vh;
         background: #FDDD1C;
         z-index: 25;
@@ -534,12 +535,12 @@ header {
     }
 
     .left-divider {
-        width: 0.5vw;
+        width: 0.4vw;
         z-index: 30;
     }
     
     .right-divider {
-        width: 0.5vw;
+        width: 0.4vw;
         z-index: 30;
     }
 
