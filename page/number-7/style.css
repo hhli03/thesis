@@ -232,6 +232,7 @@ header {
     height: 100vh;
     background: #FDDD1C;
     z-index: 5;
+    mix-blend-mode: multiply;
 }
 
 .column-divider-2 {
@@ -243,6 +244,7 @@ header {
     height: 100vh;
     background: #FDDD1C;
     z-index: 5;
+    mix-blend-mode: multiply;
 }
 
 .column-divider-3 {
@@ -254,6 +256,7 @@ header {
     height: 100vh;
     background: #FDDD1C;
     z-index: 5;
+    mix-blend-mode: multiply;
 }
 
 .column-divider-4 {
@@ -265,6 +268,7 @@ header {
     height: 100vh;
     background: #FDDD1C;
     z-index: 5;
+    mix-blend-mode: multiply;
 }
 
 .column-divider-5 {
@@ -276,6 +280,7 @@ header {
     height: 100vh;
     background: #FDDD1C;
     z-index: 5;
+    mix-blend-mode: multiply;
 }
 
 .column-divider-6 {
@@ -287,6 +292,7 @@ header {
     height: 100vh;
     background: #FDDD1C;
     z-index: 5;
+    mix-blend-mode: multiply;
 }
 
 /* Link Styling */
@@ -372,4 +378,276 @@ header {
 .image-popup.show img {
     transform: scale(1);
     opacity: 1;
+}
+
+.sub-heading {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    word-wrap: break-word;
+    vertical-align: bottom; /* Aligns the bottom of the text */
+}
+
+@media (max-width: 768px) {
+
+    .mobile-emsp {
+        white-space: pre-line;
+        content: "\2003\2003";  /* This will add an additional em space */
+    }
+
+    body {
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    /* Global Scrollbar Removal */
+    body, .grid-container, .image, .image-caption, .body-text {
+        /* For Firefox */
+        scrollbar-width: none;
+        
+        /* For IE, Edge, Chrome, Safari, Opera */
+        -ms-overflow-style: none;
+    }
+    
+    /* Chrome, Safari, Opera */
+    body::-webkit-scrollbar,
+    .grid-container::-webkit-scrollbar,
+    .image::-webkit-scrollbar,
+    .image-caption::-webkit-scrollbar,
+    .body-text::-webkit-scrollbar {
+        display: none;
+        width: 0;
+        height: 0;
+        background: transparent;
+    }
+
+    /* Grid Container - Single Column Layout */
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: 
+            "image"
+            "caption"
+            "text";
+        gap: 3vw;
+        width: 100%;
+        height: auto;
+        overflow-y: visible;
+        padding: 0;
+        padding-top: 20vw;
+        padding-bottom: 3.5vw;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        scroll-padding-top: 20vw;
+    }
+
+    /* Image Container - Goes First */
+    .image {
+        grid-area: image;
+        position: relative;
+        width: 100%; /* Image is 90% of its container */
+        max-width: 100%;
+        height: auto;
+        display: block;
+        overflow: visible;
+        box-sizing: border-box;
+        padding:2vw 8vw;
+        justify-self: center;
+        align-self: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .image img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        display: block;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Image Caption - Goes Second */
+    .image-caption {
+        grid-area: caption;
+        width: 100%;
+        font-size: 5vw;
+        line-height: 6vw;
+        margin-top: 2vw;
+        padding: 0 5vw;
+    }
+
+    /* Body Text - Goes Last */
+    .body-text {
+        grid-area: text;
+        width: 100%;
+        font-size: 5vw;
+        line-height: 6vw;
+        padding: 0 5vw;
+        margin-top: 4vw;
+        scroll-padding-top: 20vw;
+        overflow-y: auto;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+    }
+
+    /* Maintain Fixed Yellow Lines */
+    .fixed-lines {
+        position: fixed;
+        top: 0;
+        left: 1.2vw;
+        width: 0.45vw;
+        height: 100vh;
+        background: #FDDD1C;
+        z-index: 25;
+    }
+
+    .fixed-lines::after {
+        content: "";
+        position: fixed;
+        top: 0;
+        right: 1.3vw;
+        width: 0.45vw;
+        height: 100vh;
+        background: #FDDD1C;
+        z-index: 25;
+    }
+
+    /* Disable Clickable Image Functionality */
+    .clickable-image {
+        pointer-events: none;
+        cursor: default;
+    }
+    
+    /* Header - Transparent Background */
+    header {
+        position: fixed;
+        top: 0;
+        width: calc(100% - 4vw);
+        height:auto;
+        padding: 3vw 5vw;
+        z-index: 20;  /* Above gradient */
+        background: transparent; /* Transparent to show gradient */
+    }
+    
+     /* About Section - Bigger Font Size */
+    .about {
+        font-size: 5vw;  /* Increased for better visibility */
+    }
+
+    /* Icon - Bigger Size */
+    .icon {
+        width: 11.5vw;   /* Increased Width */
+        height: 15vw;  /* Increased Height */
+    }
+
+    /* General Bar Styling - Adjusted for Larger Icon */
+    .bar {
+        width: 0.5vw;  /* Slightly Thicker Bars */
+        height: 5vw;   /* Adjusted Height for Proportions */
+    }
+
+    .scroll-to-top {
+        bottom: 3.5vw;
+        font-size: 4.5vw;
+        right: 5vw;
+    }
+
+        /* Row 1 - Top Bar */
+    .row-1 {
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* Row 2 - Two Bars */
+    .row-2:nth-child(2) {
+        top: 4.5vw;
+        left: 25%;
+    }
+
+    .row-2:nth-child(3) {
+        top: 4.5vw;
+        right: 25%;
+    }
+
+    /* Row 3 - Three Bars */
+    .row-3:nth-child(4) {
+        top: 9vw;
+        left: 0%;
+    }
+
+    .row-3:nth-child(5) {
+        top: 9vw;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .row-3:nth-child(6) {
+        top: 9vw;
+        right: 0%;
+    }
+
+    .column-divider-1 {
+        width: 0.4vw;
+        z-index: 30;
+    }
+    
+    .column-divider-2 {
+        width: 0.4vw;
+        z-index: 30;
+    }
+    
+    .column-divider-3 {
+        width: 0.4vw;
+        z-index: 30;
+    }
+
+    .column-divider-4 {
+        width: 0.4vw;
+        z-index: 30;
+    }
+
+    .column-divider-5 {
+        width: 0.4vw;
+        z-index: 30;
+    }
+
+
+    .column-divider-6 {
+        width: 0.4vw;
+        z-index: 30;
+    }
+
+    .gradient-overlay {
+        width: 100vw;
+        height: 20vw;  /* Adjust height for better visibility */
+        position: fixed;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        background: linear-gradient(
+            to bottom,
+            rgba(255, 255, 255, 1) 0%,       
+            rgba(255, 255, 255, 0.98) 20%,  
+            rgba(255, 255, 255, 0.9) 40%,    
+            rgba(255, 255, 255, 0.75) 60%,   
+            rgba(255, 255, 255, 0.5) 80%,    
+            rgba(255, 255, 255, 0) 100%      
+        );
+        z-index: 15;  /* Below header, above all other content */
+        display: block;
+    }
+
+    /* Apply scroll-margin-top to the specific anchor target */
+    #fig-7-1 {
+        scroll-margin-top: 20vw;
+    }
+
 }

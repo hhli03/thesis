@@ -253,10 +253,12 @@
 
  <!-- JavaScript to Maintain Scroll Position -->
  <script>
-    // Scroll to top on refresh
-    window.addEventListener('load', function() {
+window.onload = function() {
+    // Ensure that the page scrolls to the top after everything has loaded
+    setTimeout(function() {
         window.scrollTo(0, 0);
-    });
+    }, 100); // Delay in milliseconds to account for any layout shifts
+};
 </script>
 <script src="script.js"></script>
 

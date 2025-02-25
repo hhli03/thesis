@@ -1,45 +1,52 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const scrollToTopBtn = document.querySelector('.scroll-to-top');
-    const bodyTextContainer = document.querySelector('.body-text');
-    const isBodyTextScrollable = bodyTextContainer.scrollHeight > bodyTextContainer.clientHeight;
+document.addEventListener("DOMContentLoaded", function () {
+    const scrollToTopButton = document.querySelector('.scroll-to-top');
+    const bodyText = document.querySelector('.body-text');
 
-    // Scroll to Top Functionality
-    scrollToTopBtn.addEventListener('click', function() {
-        if (isBodyTextScrollable) {
-            // Scroll the .body-text container to the top
-            bodyTextContainer.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
+    // Function to check the scroll position and toggle the button visibility
+    function toggleScrollButton() {
+        // Check if the user is on mobile or desktop
+        if (window.innerWidth <= 768) {
+            // For mobile: Use window scroll instead of bodyText
+            if (window.scrollY > 300) {
+                scrollToTopButton.classList.add('show');
+            } else {
+                scrollToTopButton.classList.remove('show');
+            }
         } else {
-            // Fallback: Scroll the main window to the top
+            // For desktop: Use bodyText scroll
+            if (bodyText.scrollTop > 300) {
+                scrollToTopButton.classList.add('show');
+            } else {
+                scrollToTopButton.classList.remove('show');
+            }
+        }
+    }
+
+    // Initial check and set the button visibility
+    toggleScrollButton();
+
+    // Check scroll on both bodyText and window
+    bodyText && bodyText.addEventListener('scroll', toggleScrollButton);
+    window.addEventListener('scroll', toggleScrollButton);
+
+    // Scroll back to top when button is clicked
+    scrollToTopButton.addEventListener('click', function() {
+        if (window.innerWidth <= 768) {
+            // For mobile: Scroll window to top
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
             });
-        }
-    });
-
-    // Show or hide the scroll-to-top button
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 100 || bodyTextContainer.scrollTop > 100) {
-            scrollToTopBtn.classList.add('show');
         } else {
-            scrollToTopBtn.classList.remove('show');
+            // For desktop: Scroll bodyText to top
+            bodyText.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         }
     });
-
-    // If .body-text is scrollable, listen to its scroll event
-    if (isBodyTextScrollable) {
-        bodyTextContainer.addEventListener('scroll', function() {
-            if (bodyTextContainer.scrollTop > 100) {
-                scrollToTopBtn.classList.add('show');
-            } else {
-                scrollToTopBtn.classList.remove('show');
-            }
-        });
-    }
 });
+
 
 document.addEventListener("DOMContentLoaded", function() {
     const images = document.querySelectorAll(".image img");
@@ -125,22 +132,5 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('resize', adjustSubHeadings);
 });
 
-// JavaScript to replace all &emsp; with &emsp;&emsp; on mobile devices
-window.addEventListener('load', function() {
-    if (window.innerWidth <= 768) {  // Check for mobile screen size
-        // Get all elements containing text
-        const elements = document.querySelectorAll('span, p, div');  // You can add more selectors as needed
-        
-        elements.forEach(function(element) {
-            // Get the current content of the element
-            let content = element.innerHTML;
-            
-            // Replace the em spaces (non-breaking spaces) with double em spaces
-            content = content.replace(/&emsp;/g, '&emsp;&emsp;');
-            
-            // Update the element's content
-            element.innerHTML = content;
-        });
-    }
-});
+
 

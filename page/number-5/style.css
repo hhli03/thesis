@@ -367,7 +367,7 @@ header {
 @media (max-width: 768px) {
     body {
         overflow-x: hidden;
-        overflow-y: auto;
+        overflow-y: auto; /* Allow scrolling on mobile */
     }
 
     /* Global Scrollbar Removal */
