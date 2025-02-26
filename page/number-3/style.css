@@ -422,8 +422,8 @@ a {
     .image-caption {
         grid-area: caption;
         width: 100%;
-        font-size: 5vw;
-        line-height: 6vw;
+        font-size: 4.5vw;
+        line-height: 5.5vw;
         margin-top: 2vw;
         padding: 0 5vw;
     }
@@ -432,8 +432,8 @@ a {
     .body-text {
         grid-area: text;
         width: 100%;
-        font-size: 5vw;
-        line-height: 6vw;
+        font-size: 4.5vw;
+        line-height: 5.5vw;
         padding: 0 5vw;
         margin-top: 4vw;
         scroll-padding-top: 20vw;
@@ -480,7 +480,7 @@ a {
     
      /* About Section - Bigger Font Size */
     .about {
-        font-size: 5vw;  /* Increased for better visibility */
+        font-size: 4.5vw;  /* Increased for better visibility */
     }
 
     /* Icon - Bigger Size */

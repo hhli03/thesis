@@ -456,8 +456,8 @@ a {
         cursor: default;
     }
     .image-caption {
-        font-size: 5vw;
-        line-height: 6vw;
+        font-size: 4.5vw;
+        line-height: 5.5vw;
         margin-top: 2vw;
         padding: 0 5vw;
     }
@@ -465,8 +465,8 @@ a {
     /* Body Text - Move Below Image and Caption */
     .body-text {
         order: 2;  /* Display Body Text Below Image and Caption */
-        font-size: 5vw;
-        line-height: 6vw;
+        font-size: 4.5vw;
+        line-height: 5.5vw;
         padding: 0 5vw;
         margin-top: 4vw;
     }
@@ -479,7 +479,7 @@ a {
 
     /* About Section - Bigger Font Size */
     .about {
-        font-size: 5vw;  /* Increased for better visibility */
+        font-size: 4.5vw;  /* Increased for better visibility */
     }
 
     /* Icon - Bigger Size */

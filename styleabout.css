@@ -155,3 +155,112 @@ a:hover {
     color: #FDDD1C; /* Yellow color on hover */
     transition: transform 0.1s ease-in-out;
 }
+
+@media (max-width: 768px) {
+    .about-text {
+        position: relative; /* Removed fixed position */
+        top: 20vw;
+        width: 100%;
+        height: auto;
+        padding: 3vw 5vw;
+        padding-bottom: 3.5vw;
+        font-size: 4.5vw;
+        line-height: 5.5vw;
+    }
+
+    /* Header - Transparent Background */
+    header {
+        position: fixed;
+        top: 0;
+        width: calc(100% - 4vw);
+        height:auto;
+        padding: 3vw 5vw;
+        z-index: 20;  /* Above gradient */
+        background: transparent; /* Transparent to show gradient */
+    }
+
+    /* Fixed Lines - Ensure Visibility */
+    .fixed-lines {
+        position: fixed;
+        top: 0;
+        left: 1.2vw;
+        width: 0.45vw;
+        height: 100vh;
+        background: #FDDD1C;
+        z-index: 25; /* Above gradient and header */
+    }
+
+    .fixed-lines::after {
+        content: "";
+        position: fixed;
+        top: 0;
+        right: 1.3vw;
+        width: 0.45vw;
+        height: 100vh;
+        background: #FDDD1C;
+        z-index: 25; /* Above gradient and header */
+    }
+
+    /* About Section - Bigger Font Size */
+    .about {
+        font-size: 4.5vw;  /* Increased for better visibility */
+    }
+
+    /* Icon - Bigger Size */
+    .icon {
+        width: 11.5vw;   /* Increased Width */
+        height: 15vw;  /* Increased Height */
+    }
+
+    /* General Bar Styling - Adjusted for Larger Icon */
+    .bar {
+        width: 0.5vw;  /* Slightly Thicker Bars */
+        height: 5vw;   /* Adjusted Height for Proportions */
+    }
+
+    .scroll-to-top {
+        bottom: 3.5vw;
+        font-size: 4.5vw;
+        right: 5vw;
+    }
+
+        /* Row 1 - Top Bar */
+    .row-1 {
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* Row 2 - Two Bars */
+    .row-2:nth-child(2) {
+        top: 4.5vw;
+        left: 25%;
+    }
+
+    .row-2:nth-child(3) {
+        top: 4.5vw;
+        right: 25%;
+    }
+
+    /* Row 3 - Three Bars */
+    .row-3:nth-child(4) {
+        top: 9vw;
+        left: 0%;
+    }
+
+    .row-3:nth-child(5) {
+        top: 9vw;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .row-3:nth-child(6) {
+        top: 9vw;
+        right: 0%;
+    }
+
+    .center-divider {
+        width: 0.4vw;
+        z-index: 30; /* Increased to be above gradient and header */
+    }
+}
