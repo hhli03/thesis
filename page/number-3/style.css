@@ -42,7 +42,6 @@ body {
     z-index: 20; /* Increased to ensure it stays above other elements */
 }
 
-
 /* Fixed Header */
 header {
     position: fixed;
@@ -78,7 +77,6 @@ header {
     padding: 0;
     cursor: pointer;
 }
-
 
 /* General Bar Styling */
 .bar {
@@ -410,7 +408,6 @@ a {
         align-items: center;
     }
     
-    
     .image img {
         width: 100%;
         height: auto;
@@ -573,5 +570,4 @@ a {
     #fig-3-1 {
         scroll-margin-top: 20vw;
     }
-
 }

@@ -203,9 +203,7 @@ header {
     cursor: zoom-in;
 }
 
-
 /* Right Column: Fixed Image Caption */
-
 .image-caption {
     grid-column: 5 / 6;
     font-size: 1.2vw;
@@ -269,7 +267,6 @@ header {
     mix-blend-mode: multiply;
 }
 
-
 .heading {
     text-transform: uppercase;
     font-family: 'Neue Montreal-Book';
@@ -312,7 +309,6 @@ header {
     opacity: 1;
     pointer-events: auto;
 }
-
 
 /* Overlay Styles */
 .image-popup {
@@ -608,5 +604,4 @@ a {
     #fig-5-1 {
         scroll-margin-top: 20vw;
     }
-
 }

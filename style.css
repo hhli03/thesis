@@ -158,7 +158,6 @@ header {
     padding:3vw;
 }
 
-
 /* Row-specific widths */
 .carousel[data-images="1"] .carousel-track img {
     width: 100%;

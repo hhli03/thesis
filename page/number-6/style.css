@@ -174,7 +174,6 @@ header {
     box-sizing: border-box;
 }
 
-
 .body-text::-webkit-scrollbar {
     display: none;
 }
@@ -379,7 +378,6 @@ a {
 }
 
 @media (max-width: 768px) {
-
     .mobile-emsp {
         white-space: pre-line;
         content: "\2003\2003";  /* This will add an additional em space */
@@ -631,5 +629,4 @@ a {
     #fig-6-1 {
         scroll-margin-top: 20vw;
     }
-
 }

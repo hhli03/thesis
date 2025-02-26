@@ -42,7 +42,6 @@ body {
     z-index: 20; /* Increased to ensure it stays above other elements */
 }
 
-
 /* Fixed Header */
 header {
     position: fixed;
@@ -123,7 +122,6 @@ header {
     right: 0%;
 }
 
-
 .grid-container {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
@@ -158,8 +156,6 @@ header {
     z-index: 1;
 }
 
-
-
 /* Left Column: Scrollable Body Text */
 .body-text {
     grid-column: 1 / 2;
@@ -181,7 +177,6 @@ header {
 .body-text::-webkit-scrollbar {
     display: none;
 }
-
 
 /* Centered Fixed Image */
 .image {
@@ -413,7 +408,6 @@ a {
 }
 
 @media (max-width: 768px) {
-
     .mobile-emsp {
         white-space: pre-line;
         content: "\2003\2003";  /* This will add an additional em space */
