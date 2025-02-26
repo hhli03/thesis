@@ -1059,9 +1059,9 @@ a {
     
         /* Larger figure label */
         .fig-label {
-            font-size: 5vw; /* Larger font */
+            font-size: 3vw; /* Larger font */
             padding: 0.4vw 0.8vw;
-            border:#FDDD1C 0.45vw solid;
+            border:#FDDD1C 0.31vw solid;
         }
         
         .carousel-track img {
@@ -1311,6 +1311,15 @@ a {
 
         /* Seventh divider at 77.77% */
         .carousel[data-images="9"] .divider-nine-6 {
+            width: 0.5vw;
+        }
+
+        /* Fixed Yellow Side Lines */
+        .fixed-lines {
+            width: 0.5vw;
+        }
+
+        .fixed-lines::after {
             width: 0.5vw;
         }
     }
