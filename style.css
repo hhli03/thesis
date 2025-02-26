@@ -129,7 +129,6 @@ header {
     margin-top: 7vw;
 }
 
-
 /* Ensure carousel only shows one image at a time */
 .carousel {
     display: flex;
@@ -1061,7 +1060,7 @@ a {
         .fig-label {
             font-size: 3vw; /* Larger font */
             padding: 0.4vw 0.8vw;
-            border:#FDDD1C 0.31vw solid;
+            border:#FDDD1C 0.3vw solid;
         }
         
         .carousel-track img {
