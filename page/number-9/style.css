@@ -20,7 +20,6 @@ body {
     
 }
 
-
 /* Fixed Yellow Side Lines */
 .fixed-lines {
     position: fixed;
@@ -42,7 +41,6 @@ body {
     background: #FDDD1C;
     z-index: 20; /* Increased to ensure it stays above other elements */
 }
-
 
 /* Fixed Header */
 header {
@@ -79,7 +77,6 @@ header {
     padding: 0;
     cursor: pointer;
 }
-
 
 /* General Bar Styling */
 .bar {
@@ -124,8 +121,6 @@ header {
     right: 0%;
 }
 
-
-
 .grid-container {
     display: grid;
     grid-template-columns: repeat(9, 1fr);
@@ -160,8 +155,6 @@ header {
     z-index: 1;
 }
 
-
-
 /* Left Column: Scrollable Body Text */
 .body-text {
     grid-column: 1 / 2;
@@ -183,8 +176,6 @@ header {
 .body-text::-webkit-scrollbar {
     display: none;
 }
-
-
 
 /* Centered Fixed Image */
 .image {
@@ -325,7 +316,6 @@ header {
     mix-blend-mode: multiply;
 }
 
-
 /* Link Styling */
 .fig-link {
     text-decoration: none;
@@ -411,7 +401,6 @@ header {
     opacity: 1;
 }
 
-
 .sub-heading {
     display: inline-block;
     white-space: nowrap;
@@ -420,6 +409,11 @@ header {
     max-width: 100%;
     word-wrap: break-word;
     vertical-align: bottom; /* Aligns the bottom of the text */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 @media (max-width: 768px) {

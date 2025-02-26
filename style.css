@@ -968,6 +968,7 @@ header {
     transform: translate(10%, 10%); /* Move to bottom right corner */
     font-family: 'Neue Montreal-Book';
 }
+
 a {
     text-decoration: none;
     color: inherit;

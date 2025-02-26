@@ -407,6 +407,11 @@ header {
     vertical-align: bottom; /* Aligns the bottom of the text */
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 @media (max-width: 768px) {
 
     .mobile-emsp {
@@ -635,7 +640,6 @@ header {
         width: 0.4vw;
         z-index: 30;
     }
-
 
     .column-divider-6 {
         width: 0.4vw;

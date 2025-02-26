@@ -78,7 +78,6 @@ header {
     cursor: pointer;
 }
 
-
 /* General Bar Styling */
 .bar {
     width: 0.19vw;
@@ -173,8 +172,6 @@ header {
     scroll-padding-top: 7vw; 
     box-sizing: border-box;
 }
-
-
 
 .body-text::-webkit-scrollbar {
     display: none;
@@ -339,7 +336,6 @@ header {
     pointer-events: auto;
 }
 
-
 /* Overlay Styles */
 .image-popup {
     display: flex;
@@ -388,6 +384,11 @@ header {
     max-width: 100%;
     word-wrap: break-word;
     vertical-align: bottom; /* Aligns the bottom of the text */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 @media (max-width: 768px) {

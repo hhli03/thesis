@@ -143,7 +143,6 @@ header {
     hyphens: auto;
 }
 
-
 .italic{
     font-family: 'Neue Montreal-Book-Italic';
 }
@@ -152,7 +151,6 @@ a {
     text-decoration: none;
     color: inherit;
 }
-
 
 a:hover {
     color: #FDDD1C; /* Yellow color on hover */
