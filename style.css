@@ -1159,166 +1159,166 @@ a {
 
         /* Divider for Row 2 (1 center line) */
         .carousel[data-images="2"]::before {
-            width: 0.5vw; /* Thin vertical line */
+            width: 0.3vw; /* Thin vertical line */
         }
 
         /* Dividers for Row 3 (2 evenly spaced lines) */
         .carousel[data-images="3"]::before,
         .carousel[data-images="3"]::after {
-            width: 0.5vw; /* Thin vertical line */
+            width: 0.3vw; /* Thin vertical line */
         }
 
         .carousel[data-images="3"]::before {
-            width: 0.5vw; /* Thin vertical line */
+            width: 0.3vw; /* Thin vertical line */
         }
 
         /* Dividers for Row 4 (3 evenly spaced lines) */
         .carousel[data-images="4"]::before,
         .carousel[data-images="4"]::after {
-            width: 0.5vw;
+            width: 0.3vw;
         }
 
         /* Third line for Row 4 (middle line at 50%) */
         .carousel[data-images="4"] .divider-middle {
-            width: 0.5vw;
+            width: 0.3vw;
         }
 
         /* Dividers for Row 5 (4 evenly spaced lines) */
         .carousel[data-images="5"]::before,
         .carousel[data-images="5"]::after {
-            width: 0.5vw;
+            width: 0.3vw;
         }
 
         /* Second divider at 40% */
         .carousel[data-images="5"] .divider-middle-1 {
-            width: 0.5vw;
+            width: 0.3vw;
         }
 
         /* Third divider at 60% */
         .carousel[data-images="5"] .divider-middle-2 {
-            width: 0.5vw;
+            width: 0.3vw;
         }
 
         /* Dividers for Row 6 (5 evenly spaced lines) */
         .carousel[data-images="6"]::before,
         .carousel[data-images="6"]::after {
-            width: 0.5vw;
+            width: 0.3vw;
         }
 
         /* Second divider at 33.33% */
         .carousel[data-images="6"] .divider-six-1 {
-            width: 0.5vw;
+            width: 0.3vw;
         }
 
         /* Third divider at 50% */
         .carousel[data-images="6"] .divider-six-2 {
-            width: 0.5vw;
+            width: 0.3vw;
         }
 
         /* Fourth divider at 66.66% */
         .carousel[data-images="6"] .divider-six-3 {
-            width: 0.5vw;
+            width: 0.3vw;
         }
 
         /* Dividers for Row 7 (6 evenly spaced lines) */
         .carousel[data-images="7"]::before,
         .carousel[data-images="7"]::after {
-            width: 0.5vw;
+            width: 0.3vw;
         }
 
         /* Second divider at 28.57% */
         .carousel[data-images="7"] .divider-seven-1 {
-            width: 0.5vw;
+            width: 0.3vw;
         }
 
         /* Third divider at 42.85% */
         .carousel[data-images="7"] .divider-seven-2 {
-            width: 0.5vw;
+            width: 0.3vw;
         }
 
         /* Fourth divider at 57.14% */
         .carousel[data-images="7"] .divider-seven-3 {
-            width: 0.5vw;
+            width: 0.3vw;
         }
 
         /* Fifth divider at 71.42% */
         .carousel[data-images="7"] .divider-seven-4 {
-            width: 0.5vw;
+            width: 0.3vw;
         }
 
         /* Dividers for Row 8 (7 evenly spaced lines) */
         .carousel[data-images="8"]::before,
         .carousel[data-images="8"]::after {
-            width: 0.5vw;
+            width: 0.3vw;
         }
 
         /* Second divider at 25% */
         .carousel[data-images="8"] .divider-eight-1 {
-            width: 0.5vw;
+            width: 0.3vw;
         }
 
         /* Third divider at 37.5% */
         .carousel[data-images="8"] .divider-eight-2 {
-            width: 0.5vw;
+            width: 0.3vw;
         }
 
         /* Fourth divider at 50% */
         .carousel[data-images="8"] .divider-eight-3 {
-            width: 0.5vw;
+            width: 0.3vw;
         }
 
         /* Fifth divider at 62.5% */
         .carousel[data-images="8"] .divider-eight-4 {
-            width: 0.5vw;
+            width: 0.3vw;
         }
 
         /* Sixth divider at 75% */
         .carousel[data-images="8"] .divider-eight-5 {
-            width: 0.5vw;
+            width: 0.3vw;
         }
 
         /* Dividers for Row 9 (8 evenly spaced lines) */
         .carousel[data-images="9"]::before,
         .carousel[data-images="9"]::after {
-            width: 0.5vw;
+            width: 0.3vw;
         }
 
         /* Second divider at 22.22% */
         .carousel[data-images="9"] .divider-nine-1 {
-            width: 0.5vw;
+            width: 0.3vw;
         }
 
         /* Third divider at 33.33% */
         .carousel[data-images="9"] .divider-nine-2 {
-            width: 0.5vw;
+            width: 0.3vw;
         }
 
         /* Fourth divider at 44.44% */
         .carousel[data-images="9"] .divider-nine-3 {
-            width: 0.5vw;
+            width: 0.3vw;
         }
 
         /* Fifth divider at 55.55% */
         .carousel[data-images="9"] .divider-nine-4 {
-            width: 0.5vw;
+            width: 0.3vw;
         }
 
         /* Sixth divider at 66.66% */
         .carousel[data-images="9"] .divider-nine-5 {
-            width: 0.5vw;
+            width: 0.3vw;
         }
 
         /* Seventh divider at 77.77% */
         .carousel[data-images="9"] .divider-nine-6 {
-            width: 0.5vw;
+            width: 0.3vw;
         }
 
         /* Fixed Yellow Side Lines */
         .fixed-lines {
-            width: 0.5vw;
+            width: 0.35vw;
         }
 
         .fixed-lines::after {
-            width: 0.5vw;
+            width: 0.35vw;
         }
     }
