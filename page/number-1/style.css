@@ -320,7 +320,7 @@ a {
 @media (max-width: 768px) {
     .gradient-overlay {
         width: 100vw;
-        height: 15vw;  /* Adjust height for better visibility */
+        height: 15vw;  /* Increased height for smoother transition */
         position: fixed;
         top: 0;
         left: 0;
@@ -335,6 +335,7 @@ a {
             rgba(255, 255, 255, 0) 100%      
         );
         z-index: 15;  /* Below header, above all other content */
+        will-change: transform; /* Forces GPU rendering for smoother effect */
         display: block;
     }
     
@@ -375,7 +376,7 @@ a {
     .fixed-lines {
         position: fixed;
         top: 0;
-        left: 1.2vw;
+        left: 1.3vw;
         width: 0.35vw;
         height: 100vh;
         background: #FDDD1C;
@@ -392,7 +393,6 @@ a {
         background: #FDDD1C;
         z-index: 25; /* Above gradient and header */
     }
-    
         
     /* Image Wrapper - Allow Image to Scale */
     .image {
@@ -471,7 +471,7 @@ a {
     .scroll-to-top {
         bottom: 3.5vw;
         font-size: 4.5vw;
-        right: 5vw;
+        right: 6.2vw;
     }
 
         /* Row 1 - Top Bar */

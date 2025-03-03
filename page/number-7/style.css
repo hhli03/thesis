@@ -24,7 +24,7 @@ body {
 .fixed-lines {
     position: fixed;
     top: 0;
-    left: 1.2vw;
+    left: 1.3vw;
     width: 0.162vw;
     height: 100vh;
     background: #FDDD1C;
@@ -556,7 +556,7 @@ a {
     .scroll-to-top {
         bottom: 3.5vw;
         font-size: 4.5vw;
-        right: 5vw;
+        right: 6.2vw;
     }
 
         /* Row 1 - Top Bar */
@@ -626,7 +626,7 @@ a {
 
     .gradient-overlay {
         width: 100vw;
-        height: 20vw;  /* Adjust height for better visibility */
+        height: 15vw;  /* Adjust height for better visibility */
         position: fixed;
         top: 0;
         left: 0;
