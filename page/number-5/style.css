@@ -367,26 +367,19 @@ a {
 
 @media (max-width: 768px) {
     body {
-        overflow-x: hidden;
-        overflow-y: auto; /* Allow scrolling on mobile */
-    }
-
-    /* Global Scrollbar Removal */
-    body, .grid-container, .image, .image-caption, .body-text {
-        /* For Firefox */
-        scrollbar-width: none;
-        
-        /* For IE, Edge, Chrome, Safari, Opera */
-        -ms-overflow-style: none;
+        overflow-y: auto !important;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
     
-    /* Chrome, Safari, Opera */
     body::-webkit-scrollbar,
     .grid-container::-webkit-scrollbar,
     .image::-webkit-scrollbar,
     .image-caption::-webkit-scrollbar,
     .body-text::-webkit-scrollbar {
-        display: none;
+        display: none; /* Hide scrollbar for Chrome, Safari */
         width: 0;
         height: 0;
         background: transparent;
