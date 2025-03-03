@@ -25,7 +25,7 @@ body {
     position: fixed;
     top: 0;
     left: 1.2vw;
-    width: 0.185vw;
+    width: 0.162vw;
     height: 100vh;
     background: #FDDD1C;
     z-index: 20; /* Increased to ensure it stays above other elements */
@@ -36,7 +36,7 @@ body {
     position: fixed;
     top: 0;
     right: 1.3vw;
-    width: 0.185vw;
+    width: 0.162vw;
     height: 100vh;
     background: #FDDD1C;
     z-index: 20; /* Increased to ensure it stays above other elements */
@@ -229,7 +229,7 @@ header {
     top: 0;
     left: 33.33%;
     transform: translateX(-50%);
-    width: 0.18vw;
+    width: 0.16vw;
     height: 100vh;
     background: #FDDD1C;
     z-index: 5;
@@ -241,7 +241,7 @@ header {
     top: 0;
     left: 66.66%;
     transform: translateX(-50%);
-    width: 0.18vw;
+    width: 0.16vw;
     height: 100vh;
     background: #FDDD1C;
     z-index: 5;
