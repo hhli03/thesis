@@ -350,12 +350,6 @@ a {
         box-sizing: border-box;
     }
     
-    /* Hide Scrollbar */
-    body, .grid-container, .image, .image-caption, .body-text {
-        scrollbar-width: none; /* Firefox */
-        -ms-overflow-style: none; /* IE, Edge */
-    }
-    
     body::-webkit-scrollbar,
     .grid-container::-webkit-scrollbar,
     .image::-webkit-scrollbar,
