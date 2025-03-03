@@ -343,7 +343,7 @@ a {
 
 @media (max-width: 768px) {
     body {
-        overflow-y: auto; /* Allow scrolling */
+        overflow-y: auto !important;
         width: 100%;
         margin: 0;
         padding: 0;
@@ -381,7 +381,8 @@ a {
             min-height: 100vh;
         scroll-padding-top: 15vw;
         padding-bottom: 3.5vw;
-        overflow-y: scroll;
+        overflow-y: unset;
+        min-height: auto;
     }
 
     /* Image Container - Goes First */
