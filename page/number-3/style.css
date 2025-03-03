@@ -342,13 +342,33 @@ a {
 }
 
 @media (max-width: 768px) {
-    html, body {
-        overflow: auto; /* Enables scrolling */
-        height: 100%;
-        -webkit-overflow-scrolling: touch; /* Improves mobile scrolling */
+    body {
+        overflow-x: hidden;
+        overflow-y: auto;
     }
 
-    /* Grid Container - Allows scrolling but hides scrollbar */
+    /* Global Scrollbar Removal */
+    body, .grid-container, .image, .image-caption, .body-text {
+        /* For Firefox */
+        scrollbar-width: none;
+        
+        /* For IE, Edge, Chrome, Safari, Opera */
+        -ms-overflow-style: none;
+    }
+    
+    /* Chrome, Safari, Opera */
+    body::-webkit-scrollbar,
+    .grid-container::-webkit-scrollbar,
+    .image::-webkit-scrollbar,
+    .image-caption::-webkit-scrollbar,
+    .body-text::-webkit-scrollbar {
+        display: none;
+        width: 0;
+        height: 0;
+        background: transparent;
+    }
+
+    /* Grid Container - Single Column Layout */
     .grid-container {
         display: grid;
         grid-template-columns: 1fr;
@@ -360,32 +380,16 @@ a {
         gap: 3vw;
         width: 100%;
         height: auto;
+        overflow-y: visible;
         padding: 0;
         padding-top: 15vw;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        scroll-padding-top: 15vw;
         padding-bottom: 3.5vw;
-        overflow-y: auto; /* Keeps scrolling active */
-        -webkit-overflow-scrolling: touch;
     }
 
-    /* Hide Scrollbar Completely in All Browsers */
-    html, body, .grid-container {
-        scrollbar-width: none;  /* Firefox */
-        -ms-overflow-style: none;  /* IE and Edge */
-    }
-
-    /* Hide Scrollbar for Chrome, Safari, Opera */
-    html::-webkit-scrollbar,
-    body::-webkit-scrollbar,
-    .grid-container::-webkit-scrollbar {
-        width: 0px;
-        height: 0px;
-        display: none;
-        background: transparent;
-    }
-    
     /* Image Container - Goes First */
     .image {
         grid-area: image;
