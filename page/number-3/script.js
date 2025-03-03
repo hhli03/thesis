@@ -45,8 +45,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-
-
 document.addEventListener("DOMContentLoaded", function() {
     const images = document.querySelectorAll(".image img");
     const popup = document.createElement("div");
@@ -130,4 +128,3 @@ document.addEventListener('DOMContentLoaded', function () {
     // Recalculate on window resize
     window.addEventListener('resize', adjustSubHeadings);
 });
-
