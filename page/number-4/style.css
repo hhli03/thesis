@@ -353,7 +353,7 @@ a {
 @media (max-width: 768px) {
     body {
         overflow-x: hidden;
-        overflow-y: auto;
+        overflow-y: auto; /* Allow scrolling on mobile */
     }
 
     /* Global Scrollbar Removal */
@@ -391,12 +391,12 @@ a {
         height: auto;
         overflow-y: visible;
         padding: 0;
-        padding-top:15vw;
+        padding-top: 15vw;
+        padding-bottom: 3.5vw;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
         scroll-padding-top: 15vw;
-        padding-bottom: 3.5vw;
     }
 
     /* Image Container - Goes First */
@@ -409,7 +409,7 @@ a {
         display: block;
         overflow: visible;
         box-sizing: border-box;
-        padding: 2vw 8vw;
+        padding:2vw 8vw;
         justify-self: center;
         align-self: center;
         display: flex;
@@ -510,7 +510,7 @@ a {
         right: 6.2vw;
     }
 
-        /* Row 1 - Top Bar */
+    /* Row 1 - Top Bar */
     .row-1 {
         top: 0;
         left: 50%;
