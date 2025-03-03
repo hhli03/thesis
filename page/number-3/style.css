@@ -343,31 +343,30 @@ a {
 
 @media (max-width: 768px) {
     body {
-        overflow-x: hidden;
-        overflow-y: auto;
-    }
-
-    /* Global Scrollbar Removal */
-    body, .grid-container, .image, .image-caption, .body-text {
-        /* For Firefox */
-        scrollbar-width: none;
-        
-        /* For IE, Edge, Chrome, Safari, Opera */
-        -ms-overflow-style: none;
+        overflow-y: auto; /* Allow scrolling */
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
     
-    /* Chrome, Safari, Opera */
+    /* Hide Scrollbar */
+    body, .grid-container, .image, .image-caption, .body-text {
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* IE, Edge */
+    }
+    
     body::-webkit-scrollbar,
     .grid-container::-webkit-scrollbar,
     .image::-webkit-scrollbar,
     .image-caption::-webkit-scrollbar,
     .body-text::-webkit-scrollbar {
-        display: none;
+        display: none; /* Hide scrollbar for Chrome, Safari */
         width: 0;
         height: 0;
         background: transparent;
     }
-
+    
     /* Grid Container - Single Column Layout */
     .grid-container {
         display: grid;
@@ -388,6 +387,7 @@ a {
             min-height: 100vh;
         scroll-padding-top: 15vw;
         padding-bottom: 3.5vw;
+        overflow-y: scroll;
     }
 
     /* Image Container - Goes First */
