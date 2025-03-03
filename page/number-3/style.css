@@ -349,7 +349,7 @@ a {
 
     body {
         overflow-x: hidden;
-        overflow-y: auto;
+        overflow-y: auto; /* Change from hidden to auto */
     }
 
     /* Global Scrollbar Removal */
