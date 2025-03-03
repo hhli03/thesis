@@ -168,7 +168,6 @@ header {
     padding: 1.3vw;
     padding-top: 7vw; /* Space before the text */
     box-sizing: border-box;
-    scroll-padding-top: 7vw; 
     margin: 0;  /* Remove any default margin */
 }
 
@@ -381,7 +380,6 @@ a {
         gap: 3vw;
         position: relative;
         z-index: 1;  /* Below gradient */
-        scroll-padding-top: 15vw; 
         overflow-y: scroll;
         -ms-overflow-style: none;  /* IE and Edge */
         scrollbar-width: none;  /* Firefox */
@@ -539,4 +537,9 @@ a {
         width: 0.3vw;
         z-index: 30; /* Increased to be above gradient and header */
     }
+
+        /* Apply scroll-margin-top to the specific anchor target */
+        #fig-2-1 {
+            scroll-margin-top: 15vw;
+        }
 }

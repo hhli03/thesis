@@ -362,7 +362,6 @@ a {
         gap: 3vw;
         position: relative;
         z-index: 1;  /* Below gradient */
-        scroll-padding-top: 15vw; 
         overflow-y: scroll;
         -ms-overflow-style: none;  /* IE and Edge */
         scrollbar-width: none;  /* Firefox */
