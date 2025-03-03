@@ -78,7 +78,6 @@ header {
     cursor: pointer;
 }
 
-
 /* General Bar Styling */
 .bar {
     width: 0.19vw;
@@ -124,8 +123,8 @@ header {
 
 .grid-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /* 5 Equal Columns */
-    gap:1.5vw;
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* 4 Equal Columns */
+    gap: 1.5vw;
     width: 100%;
     height: 100vh;  /* Full viewport height */
     margin: 0 auto;
@@ -139,7 +138,7 @@ header {
     content: '';
     display: block;
     width: 100%;
-    height: 7vw;  /* Gradient Height */
+    height: 7vw;  /* Taller Gradient for Smoother Transition */
     position: absolute;
     top: 0;
     left: 0;
@@ -159,58 +158,34 @@ header {
 /* Left Column: Scrollable Body Text */
 .body-text {
     grid-column: 1 / 2;
-    font-size: 1.2vw;
-    line-height: 1.4vw;
+    font-size: 1.4vw;
+    line-height: 1.65vw;
     color: black;
     text-align: left;
     padding: 1.3vw;
-    padding-top: 7vw; /* Start 6vw lower */
-    scrollbar-width: none;
+    padding-top: 7vw; /* Space before the text */
+    scrollbar-width: none; 
     -ms-overflow-style: none;
     overflow-x: hidden;
-    hyphens: auto;
-    overflow-y: auto;
+    hyphens: auto; 
+    overflow-y: auto; /* Make the text scrollable */
+    height: 100%;  /* Full height */
     box-sizing: border-box;
-    scroll-padding-top: 7vw; 
+    scroll-padding-top: 7vw; /* Smooth scroll start after 6vw */
 }
 
 .body-text::-webkit-scrollbar {
     display: none;
 }
 
-.image {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 16vw;   /* Fixed height */
-    width: auto;
-    z-index: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;   /* Ensures no overflow */
-    padding:1vw;
-}
-
-.image img {
-    max-width: 100%;
-    max-height: 100%;
-    width: auto;
-    height: auto;
-    object-fit: contain;
-    display: block;
-    cursor: zoom-in;
-}
-
 /* Right Column: Fixed Image Caption */
 .image-caption {
-    grid-column: 5 / 6;
-    font-size: 1.2vw;
-    line-height: 1.4vw;
+    grid-column: 4 / 5;
+    font-size: 1.4vw;
+    line-height: 1.65vw;
     text-align: left;
     padding: 1.3vw;
-    padding-top: 7vw; /* Start 6vw lower */
+    padding-top: 7vw; /* Space before the text */
     box-sizing: border-box;
     background: white;
     display: block;
@@ -218,64 +193,13 @@ header {
     overflow-y: auto;
 }
 
-/* Divider Lines for 5 Columns */
-.column-divider-1 {
-    position: fixed;
-    top: 0;
-    left: 20%;
-    transform: translateX(-50%);
-    width: 0.16vw;
-    height: 100vh;
-    background: #FDDD1C;
-    z-index: 5;
-    mix-blend-mode: multiply;
-}
-
-.column-divider-2 {
-    position: fixed;
-    top: 0;
-    left: 40%;
-    transform: translateX(-50%);
-    width: 0.16vw;
-    height: 100vh;
-    background: #FDDD1C;
-    z-index: 5;
-    mix-blend-mode: multiply;
-}
-
-.column-divider-3 {
-    position: fixed;
-    top: 0;
-    left: 60%;
-    transform: translateX(-50%);
-    width: 0.16vw;
-    height: 100vh;
-    background: #FDDD1C;
-    z-index: 5;
-    mix-blend-mode: multiply;
-}
-
-.column-divider-4 {
-    position: fixed;
-    top: 0;
-    left: 80%;
-    transform: translateX(-50%);
-    width: 0.16vw;
-    height: 100vh;
-    background: #FDDD1C;
-    z-index: 5;
-    mix-blend-mode: multiply;
-}
-
-.heading {
-    text-transform: uppercase;
-    font-family: 'Neue Montreal-Book';
-}
-
-/* Link Styling */
 .fig-link {
     text-decoration: none;
     cursor: pointer;
+}
+
+.caption-text {
+    display: inline;
 }
 
 .fig-number {
@@ -289,8 +213,65 @@ header {
     color: white;
 }
 
-.caption-text {
-    display: inline;
+.image {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 16vw;
+    width: auto;
+    z-index: 1;
+    padding:1vw;
+}
+
+.image img {
+    height: 100%;  /* Fixed height */
+    width: 100%;   /* Maintain aspect ratio */
+    object-fit: contain;
+    display: block;
+    padding:1vw;
+    cursor: zoom-in;
+}
+
+/* Divider Lines for 4 Columns */
+.column-divider-1 {
+    position: fixed;
+    top: 0;
+    left: 25%;
+    transform: translateX(-50%);
+    width: 0.16vw;
+    height: 100vh;
+    background: #FDDD1C;
+    z-index: 5;
+    mix-blend-mode: multiply;
+}
+
+.column-divider-2 {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0.16vw;
+    height: 100vh;
+    background: #FDDD1C;
+    z-index: 5;
+    mix-blend-mode: multiply;
+}
+
+.column-divider-3 {
+    position: fixed;
+    top: 0;
+    left: 75%;
+    transform: translateX(-50%);
+    width: 0.16vw;
+    height: 100vh;
+    background: #FDDD1C;
+    z-index: 5;
+    mix-blend-mode: multiply;
+}
+
+.heading {
+    text-transform: uppercase;
 }
 
 .scroll-to-top {
@@ -320,13 +301,14 @@ header {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(255, 255, 255, 0.85); /* Transparent White */
+    background: rgba(255, 255, 255, 0.3); /* Transparent White for better blur */
+    -webkit-backdrop-filter: blur(10px); /* For Safari support */
     z-index: 1000;
     cursor: pointer;
     overflow: hidden;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out, backdrop-filter 0.3s ease-in-out;
 }
 
 .image-popup.show {
@@ -575,11 +557,6 @@ a {
         z-index: 30;
     }
 
-    .column-divider-4 {
-        width: 0.3vw;
-        z-index: 30;
-    }
-
     .gradient-overlay {
         width: 100vw;
         height: 15vw;  /* Adjust height for better visibility */
@@ -601,7 +578,7 @@ a {
     }
 
     /* Apply scroll-margin-top to the specific anchor target */
-    #fig-5-1 {
+    #fig-4-1 {
         scroll-margin-top: 15vw;
     }
 }
