@@ -169,12 +169,12 @@ header {
     padding-top: 7vw; /* Space before the text */
     box-sizing: border-box;
     margin: 0;  /* Remove any default margin */
+    scroll-padding-top: 7vw;
 }
 
 .body-text::-webkit-scrollbar {
     display: none;
 }
-
 
 /* Fixed Yellow Center Divider Line */
 .center-divider {
@@ -362,7 +362,7 @@ a {
         height: 0;
         background: transparent;
     }
-    
+
     .gradient-overlay {
         width: 100vw;
         height: 15vw;  /* Adjust height for better visibility */
