@@ -22,8 +22,11 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    // Initial check and set the button visibility
+    toggleScrollButton();
+
     // Check scroll on both bodyText and window
-    bodyText.addEventListener('scroll', toggleScrollButton);
+    bodyText && bodyText.addEventListener('scroll', toggleScrollButton);
     window.addEventListener('scroll', toggleScrollButton);
 
     // Scroll back to top when button is clicked
@@ -77,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function () {
             subHeading.setAttribute('data-original-text', originalText);
 
             // Reset the text to original before recalculating
-            subHeading.innerHTML = `&emsp;&emsp;${originalText}`;
+            subHeading.innerHTML = `&emsp;${originalText}`;
 
             // Function to check if the text overflows
             const isOverflowing = (element) => {
@@ -117,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 const secondLine = originalText.slice(splitIndex).trim();
 
                 // Reconstruct the text with line break and consistent indentation
-                subHeading.innerHTML = `&emsp;&emsp;${firstLine}<br>&emsp;&emsp;${secondLine}`;
+                subHeading.innerHTML = `&emsp;${firstLine}<br>&emsp;${secondLine}`;
             }
         });
     };
@@ -128,4 +131,6 @@ document.addEventListener('DOMContentLoaded', function () {
     // Recalculate on window resize
     window.addEventListener('resize', adjustSubHeadings);
 });
+
+
 
