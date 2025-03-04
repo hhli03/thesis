@@ -455,7 +455,7 @@ a {
         display: block;
         overflow: visible;
         box-sizing: border-box;
-        padding:2vw 11.5vw;
+        padding:2vw 8vw;
         justify-self: center;
         align-self: center;
         display: flex;
