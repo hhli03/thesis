@@ -296,13 +296,12 @@ header {
     z-index: 1;
     pointer-events: all;
     margin: 0;
-    padding: 0;
 }
 
 .image img {
     width: 100%;
     height: auto;
-    max-height: 24vw; /* Maximum height for the image */
+    max-height: 22vw; /* Maximum height for the image */
     object-fit: contain;
     display: block;
     cursor: zoom-in;
@@ -539,8 +538,12 @@ a {
         z-index: 30; /* Increased to be above gradient and header */
     }
 
-        /* Apply scroll-margin-top to the specific anchor target */
-        #fig-2-1 {
-            scroll-margin-top: 15vw;
-        }
+     /* Apply scroll-margin-top to the specific anchor target */
+    #fig-2-1 {
+        scroll-margin-top: 15vw;
+    }
+
+    #fig-2-2 {
+        scroll-margin-top: 15vw;
+    }
 }
