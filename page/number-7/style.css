@@ -361,7 +361,7 @@ header {
 }
 
 .image-popup img {
-    max-width: auto;
+    max-width: 70vw;
     max-height: 70vh;
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
     transform: scale(0.8);
@@ -455,7 +455,7 @@ a {
         display: block;
         overflow: visible;
         box-sizing: border-box;
-        padding:2vw 8vw;
+        padding:2vw 11.5vw;
         justify-self: center;
         align-self: center;
         display: flex;
@@ -645,7 +645,7 @@ a {
     }
 
     /* Apply scroll-margin-top to the specific anchor target */
-    #fig-7-1 {
+    #fig-no {
         scroll-margin-top: 15vw;
     }
 }

@@ -441,7 +441,7 @@ a {
         display: block;
         overflow: visible;
         box-sizing: border-box;
-        padding:2vw 11vw;
+        padding:2vw 11.5vw;
         justify-self: center;
         align-self: center;
         display: flex;
@@ -625,8 +625,7 @@ a {
         display: block;
     }
 
-    /* Apply scroll-margin-top to the specific anchor target */
-    #fig-6-1, #fig-6-2, #fig-6-3, #fig-6-4 {
+    #fig-no {
         scroll-margin-top: 15vw;
     }
 }
