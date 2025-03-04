@@ -219,7 +219,7 @@ header {
     left: 50%;
     transform: translate(-50%, -50%);
     height: 18vw;
-    width: 22vw;
+    width: 21vw;
     z-index: 1;
     padding:1vw;
 }
@@ -578,7 +578,7 @@ a {
     }
 
     /* Apply scroll-margin-top to the specific anchor target */
-    #fig-4-1, #fig-4-2, #fig-4-3 {
+    #fig-no {
         scroll-margin-top: 15vw;
     }
 }
