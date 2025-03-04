@@ -218,8 +218,8 @@ header {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 16vw;
-    width: auto;
+    height: 18vw;
+    width: 22vw;
     z-index: 1;
     padding:1vw;
 }
@@ -317,7 +317,7 @@ header {
 }
 
 .image-popup img {
-    max-width: auto;
+    max-width: 70vw;
     max-height: 70vh;
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
     transform: scale(0.8);
@@ -578,7 +578,7 @@ a {
     }
 
     /* Apply scroll-margin-top to the specific anchor target */
-    #fig-4-1 {
+    #fig-4-1, #fig-4-2, #fig-4-3 {
         scroll-margin-top: 15vw;
     }
 }

@@ -184,7 +184,7 @@ header {
     left: 50%;
     transform: translate(-50%, -50%);
     height: 16vw;   /* Fixed height */
-    width: auto;
+    width: 14.5vw;
     z-index: 1;
     display: flex;
     justify-content: center;
@@ -601,7 +601,7 @@ a {
     }
 
     /* Apply scroll-margin-top to the specific anchor target */
-    #fig-5-1 {
+    #fig-5-1, #fig-5-2, #fig-5-3 {
         scroll-margin-top: 15vw;
     }
 }

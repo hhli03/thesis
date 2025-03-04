@@ -816,8 +816,8 @@ header {
     width: 33.33%;
     height: 16vw;
     flex-shrink: 0; /* Prevents shrinking */
-    padding-right: 2vw;
-    padding-left: 2vw;
+    padding-right: 1.8vw;
+    padding-left: 1.8vw;
     padding-top: 0.5vw;
     padding-bottom: 0.5vw;
     box-sizing: border-box; /* Ensure padding is included in the width */
@@ -838,8 +838,8 @@ header {
     flex-shrink: 0; /* Prevents shrinking */
     padding-right: 0vw;
     padding-left: 0vw;
-    padding-top: 0.5vw;
-    padding-bottom: 0.5vw;
+    padding-top: 0.3vw;
+    padding-bottom: 0.3vw;
     box-sizing: border-box; /* Ensure padding is included in the width */
     overflow: hidden; /* Prevents overflow */
 }
