@@ -302,7 +302,7 @@ header {
 .image img {
     width: 100%;
     height: auto;
-    max-height: 22vw; /* Maximum height for the image */
+    max-height: 21vw; /* Maximum height for the image */
     object-fit: contain;
     display: block;
     cursor: zoom-in;
@@ -540,11 +540,7 @@ a {
     }
 
      /* Apply scroll-margin-top to the specific anchor target */
-    #fig-2-1 {
-        scroll-margin-top: 15vw;
-    }
-
-    #fig-2-2 {
+    #fig-no {
         scroll-margin-top: 15vw;
     }
 }

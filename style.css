@@ -816,8 +816,8 @@ header {
     width: 33.33%;
     height: 16vw;
     flex-shrink: 0; /* Prevents shrinking */
-    padding-right: 1.8vw;
-    padding-left: 1.8vw;
+    padding-right: 1.6vw;
+    padding-left: 1.6vw;
     padding-top: 0.5vw;
     padding-bottom: 0.5vw;
     box-sizing: border-box; /* Ensure padding is included in the width */

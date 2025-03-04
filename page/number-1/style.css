@@ -196,10 +196,9 @@ header {
     line-height: 2.35vw;
     text-align: center;
     width: 100%;
-    padding: 1vw;
+    padding: 1vw 5vw; 
     box-sizing: border-box;
     display: block;
-    hyphens: auto;
 }
 
 

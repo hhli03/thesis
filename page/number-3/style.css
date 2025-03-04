@@ -189,8 +189,26 @@ header {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 16vw;
+    height: 15.5vw;
     width: auto;
+}
+
+.image-small {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 7.8vw;
+    width: auto;
+}
+
+.image-small img {
+    height: 100%;  /* Fixed height */
+    width: auto;   /* Maintain aspect ratio */
+    object-fit: contain;
+    display: block;
+    padding:1vw;
+    cursor: zoom-in;
 }
 
 .image img {
@@ -216,7 +234,6 @@ header {
     display: block;   /* Change to block for inline text flow */
     hyphens: auto;
 }
-
 
 .caption-text {
     display: inline;  /* Make caption text inline */
@@ -247,7 +264,6 @@ header {
     z-index: 5;
     mix-blend-mode: multiply;
 }
-
 
 .equation {
     font-family: 'Neue Montreal-Book Italic';
@@ -575,15 +591,7 @@ a {
     }
 
     /* Apply scroll-margin-top to the specific anchor target */
-    #fig-3-1 {
-        scroll-margin-top: 15vw;
-    }
-
-    #fig-3-2 {
-        scroll-margin-top: 15vw;
-    }
-
-    #fig-3-3 {
+    #fig-no {
         scroll-margin-top: 15vw;
     }
 }
