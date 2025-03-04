@@ -185,7 +185,7 @@ header {
     left: 50%;
     transform: translate(-50%, -50%);
     height: auto;
-    width: 10vw;
+    width: 10.5vw;
     z-index:1;
     display: flex;
     justify-content: center;
@@ -219,7 +219,6 @@ header {
     overflow-y: auto;
     padding-top: 7vw;
 }
-
 
 /* Divider Lines for 8 Columns */
 .column-divider-1 {

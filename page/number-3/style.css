@@ -412,7 +412,7 @@ a {
     }
 
     /* Image Container - Goes First */
-    .image {
+    .image, .image-small {
         grid-area: image;
         position: relative;
         width: 100%; /* Image is 90% of its container */
@@ -429,7 +429,7 @@ a {
         align-items: center;
     }
     
-    .image img {
+    .image, .image-small img {
         width: 100%;
         height: auto;
         object-fit: contain;
