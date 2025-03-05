@@ -318,7 +318,7 @@ header {
 
 .image-popup img {
     max-width: 70vw;
-    max-height: 70vh;
+    max-height: 65vh;
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
     transform: scale(0.8);
     opacity: 0;
