@@ -938,8 +938,8 @@ header {
     flex-shrink: 0; /* Prevents shrinking */
     padding-right: 0vw;
     padding-left: 0vw;
-    padding-top: 0.15vw;
-    padding-bottom: 0.15vw;
+    padding-top: 0.1vw;
+    padding-bottom: 0.1vw;
     box-sizing: border-box; /* Ensure padding is included in the width */
     overflow: hidden; /* Prevents overflow */
 }
