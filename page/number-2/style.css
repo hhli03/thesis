@@ -433,7 +433,7 @@ a {
         overflow: visible;
         margin: 0 auto;
         box-sizing: border-box;
-        padding:2vw 8vw;
+        padding:2vw 5vw;
     }
     
     /* Actual Image - Override All Styles */

@@ -480,7 +480,7 @@ a {
         display: block;
         overflow: visible;
         box-sizing: border-box;
-        padding:2vw 8vw;
+        padding:2vw 5vw;
         justify-self: center;
         align-self: center;
         display: flex;
