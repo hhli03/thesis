@@ -176,7 +176,6 @@ header {
     display: none;
 }
 
-
 /* Fixed Yellow Center Divider Line */
 .center-divider {
     position: fixed;
@@ -277,7 +276,7 @@ header {
 .image-container {
     display: flex;
     flex-direction: column; /* Stack image and caption */
-    gap: 3vw;
+    gap: 2.2vw;
     width: 100%;
     justify-content: flex-start;
     align-items: flex-start;
@@ -302,7 +301,7 @@ header {
 .image img {
     width: 100%;
     height: auto;
-    max-height: 21vw; /* Maximum height for the image */
+    max-height: 20vw; /* Maximum height for the image */
     object-fit: contain;
     display: block;
     cursor: zoom-in;
