@@ -601,7 +601,7 @@ a {
     }
 
     /* Apply scroll-margin-top to the specific anchor target */
-    #fig-5-1, #fig-5-2, #fig-5-3, #fig-5-4, #fig-5-5 {
+    #fig-no {
         scroll-margin-top: 15vw;
     }
 }

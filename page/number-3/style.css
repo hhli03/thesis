@@ -358,14 +358,9 @@ a {
 }
 
 @media (max-width: 768px) {
-    .mobile-emsp {
-        white-space: pre-line;
-        content: "\2003\2003";  /* This will add an additional em space */
-    }
-
     body {
         overflow-x: hidden;
-        overflow-y: auto; /* Change from hidden to auto */
+        overflow-y: auto; /* Allow scrolling on mobile */
     }
 
     /* Global Scrollbar Removal */
@@ -412,7 +407,7 @@ a {
     }
 
     /* Image Container - Goes First */
-    .image, .image-small {
+    .image {
         grid-area: image;
         position: relative;
         width: 100%; /* Image is 90% of its container */
@@ -429,7 +424,7 @@ a {
         align-items: center;
     }
     
-    .image, .image-small img {
+    .image img {
         width: 100%;
         height: auto;
         object-fit: contain;
@@ -457,9 +452,6 @@ a {
         line-height: 5.5vw;
         padding: 0 5vw;
         margin-top: 4vw;
-        overflow-y: auto;
-        box-sizing: border-box;
-        scroll-behavior: smooth;
     }
 
     /* Maintain Fixed Yellow Lines */
@@ -525,7 +517,7 @@ a {
         right: 6.2vw;
     }
 
-        /* Row 1 - Top Bar */
+    /* Row 1 - Top Bar */
     .row-1 {
         top: 0;
         left: 50%;
@@ -560,12 +552,22 @@ a {
         right: 0%;
     }
 
-    .left-divider {
+    .column-divider-1 {
         width: 0.3vw;
         z-index: 30;
     }
     
-    .right-divider {
+    .column-divider-2 {
+        width: 0.3vw;
+        z-index: 30;
+    }
+    
+    .column-divider-3 {
+        width: 0.3vw;
+        z-index: 30;
+    }
+
+    .column-divider-4 {
         width: 0.3vw;
         z-index: 30;
     }
