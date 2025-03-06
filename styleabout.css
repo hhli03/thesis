@@ -175,11 +175,11 @@ a:hover {
         width: calc(100% - 4vw);
         height:auto;
         padding: 3vw 5vw;
+        padding-right: 4.2vw;
         z-index: 20;  /* Above gradient */
         background: transparent; /* Transparent to show gradient */
     }
-
- 
+    
     /* Maintain Fixed Yellow Lines */
     .fixed-lines {
         position: fixed;
