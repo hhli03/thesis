@@ -159,7 +159,7 @@ a:hover {
 @media (max-width: 768px) {
     .about-text {
         position: relative; /* Removed fixed position */
-        top: 20vw;
+        top: 15vw;
         width: 100%;
         height: auto;
         padding: 3vw 5vw;
@@ -179,15 +179,16 @@ a:hover {
         background: transparent; /* Transparent to show gradient */
     }
 
-    /* Fixed Lines - Ensure Visibility */
+ 
+    /* Maintain Fixed Yellow Lines */
     .fixed-lines {
         position: fixed;
         top: 0;
         left: 1.2vw;
-        width: 0.45vw;
+        width: 0.35vw;
         height: 100vh;
         background: #FDDD1C;
-        z-index: 25; /* Above gradient and header */
+        z-index: 25;
     }
 
     .fixed-lines::after {
@@ -195,10 +196,10 @@ a:hover {
         position: fixed;
         top: 0;
         right: 1.3vw;
-        width: 0.45vw;
+        width: 0.35vw;
         height: 100vh;
         background: #FDDD1C;
-        z-index: 25; /* Above gradient and header */
+        z-index: 25;
     }
 
     /* About Section - Bigger Font Size */
@@ -208,20 +209,14 @@ a:hover {
 
     /* Icon - Bigger Size */
     .icon {
-        width: 11.5vw;   /* Increased Width */
-        height: 15vw;  /* Increased Height */
+        width: 7.5vw;   /* Increased Width */
+        height: 8vw;  /* Increased Height */
     }
 
     /* General Bar Styling - Adjusted for Larger Icon */
     .bar {
-        width: 0.5vw;  /* Slightly Thicker Bars */
-        height: 5vw;   /* Adjusted Height for Proportions */
-    }
-
-    .scroll-to-top {
-        bottom: 3.5vw;
-        font-size: 4.5vw;
-        right: 5vw;
+        width: 0.4vw;  /* Slightly Thicker Bars */
+        height: 3vw;   /* Adjusted Height for Proportions */
     }
 
         /* Row 1 - Top Bar */
@@ -233,29 +228,29 @@ a:hover {
 
     /* Row 2 - Two Bars */
     .row-2:nth-child(2) {
-        top: 4.5vw;
+        top: 3vw;
         left: 25%;
     }
 
     .row-2:nth-child(3) {
-        top: 4.5vw;
+        top: 3vw;
         right: 25%;
     }
 
     /* Row 3 - Three Bars */
     .row-3:nth-child(4) {
-        top: 9vw;
+        top: 6vw;
         left: 0%;
     }
 
     .row-3:nth-child(5) {
-        top: 9vw;
+        top: 6vw;
         left: 50%;
         transform: translateX(-50%);
     }
 
     .row-3:nth-child(6) {
-        top: 9vw;
+        top: 6vw;
         right: 0%;
     }
 
