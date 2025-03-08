@@ -82,13 +82,17 @@ header {
     cursor: pointer;
 }
 
-
 /* General Bar Styling */
 .bar {
-    width: 0.19vw;
+    width: 0.181vw;
     height: 1.4vw;
     background: #FDDD1C;
     position: absolute;
+}
+
+.icon:hover .bar {
+    background: black;
+    transition: background 0.1s ease-in-out;
 }
 
 /* Row 1 - Top Bar */
