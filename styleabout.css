@@ -69,6 +69,11 @@ header {
     text-align: left;
 }
 
+.about:hover {
+    color: black;
+    transition: background 0.1s ease-in-out;
+}
+
 /* Custom Icon Styling */
 .icon {
     display: flex;
@@ -179,7 +184,7 @@ a:hover {
         z-index: 20;  /* Above gradient */
         background: transparent; /* Transparent to show gradient */
     }
-    
+
     /* Maintain Fixed Yellow Lines */
     .fixed-lines {
         position: fixed;

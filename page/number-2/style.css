@@ -64,6 +64,11 @@ header {
     text-align: left;
 }
 
+.about:hover {
+    color: black;
+    transition: background 0.1s ease-in-out;
+}
+
 /* Custom Icon Styling */
 .icon {
     display: flex;
