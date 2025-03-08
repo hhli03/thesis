@@ -63,6 +63,11 @@ header {
     text-align: left;
 }
 
+.about:hover {
+    color: black;
+    transition: background 0.1s ease-in-out;
+}
+
 /* Custom Icon Styling */
 .icon {
     display: flex;
@@ -78,10 +83,15 @@ header {
 
 /* General Bar Styling */
 .bar {
-    width: 0.19vw;
+    width: 0.17vw;
     height: 1.4vw;
     background: #FDDD1C;
     position: absolute;
+}
+
+.icon:hover .bar {
+    background: black;
+    transition: background 0.1s ease-in-out;
 }
 
 /* Row 1 - Top Bar */
@@ -256,7 +266,7 @@ header {
     position: absolute;
     background: transparent;
     border:none;
-    font-size: 2.8vw;
+    font-size: 3vw;
     cursor: pointer;
     top: 50%;
     transform: translateY(-50%);
