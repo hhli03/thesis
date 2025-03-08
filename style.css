@@ -65,7 +65,7 @@ header {
 
 .about:hover {
     color: black;
-    transition: background 0.1s ease-in-out;
+    transition: color 0.1s ease-in-out;
 }
 
 /* Custom Icon Styling */
@@ -1077,9 +1077,9 @@ a {
     
         /* Larger figure label */
         .fig-label {
-            font-size: 3vw; /* Larger font */
+            font-size: 2.6vw; /* Larger font */
             padding: 0.4vw 0.8vw;
-            border:#FDDD1C 0.3vw solid;
+            border:#FDDD1C 0.2vw solid;
         }
         
         .carousel-track img {

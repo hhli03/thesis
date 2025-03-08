@@ -65,7 +65,7 @@ header {
 
 .about:hover {
     color: black;
-    transition: background 0.1s ease-in-out;
+    transition: color 0.1s ease-in-out;
 }
 
 /* Custom Icon Styling */
