@@ -65,7 +65,7 @@ header {
 
 .about:hover {
     color: black;
-    transition: color 0.1s ease-in-out;
+    transition: all 0.3s ease;
 }
 
 /* Custom Icon Styling */
@@ -91,7 +91,7 @@ header {
 
 .icon:hover .bar {
     background: black;
-    transition: background 0.1s ease-in-out;
+    transition: all 0.3s ease;
 }
 
 /* Row 1 - Top Bar */
@@ -292,7 +292,7 @@ header {
 /* Hover effect */
 .prev:hover, .next:hover {
     color: #FDDD1C; /* White arrow color on hover */
-    transition: background 0.2s ease-in-out;
+    transition: all 0.3s ease;
 }
 
 /* Divider for Row 2 (1 center line) */

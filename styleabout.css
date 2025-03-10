@@ -69,7 +69,6 @@ header {
     text-align: left;
 }
 
-
 /* Custom Icon Styling */
 .icon {
     display: flex;
@@ -93,8 +92,13 @@ header {
 
 .icon:hover .bar {
     background: black;
-    transition: background 0.1s ease-in-out;
+    transition: all 0.3s ease;
 }
+
+.icon:hover {
+    background:white;
+    transition: all 0.3s ease;
+} 
 
 /* Row 1 - Top Bar */
 .row-1 {
@@ -159,7 +163,7 @@ a {
 
 a:hover {
     color: #FDDD1C; /* Yellow color on hover */
-    transition: transform 0.1s ease-in-out;
+    transition: all 0.3s ease;
 }
 
 @media (max-width: 768px) {
@@ -216,7 +220,7 @@ a:hover {
     /* Icon - Bigger Size */
     .icon {
         width: 7.5vw;   /* Increased Width */
-        height: 8vw;  /* Increased Height */
+        height: 9vw;  /* Increased Height */
     }
 
     /* General Bar Styling - Adjusted for Larger Icon */
