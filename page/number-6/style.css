@@ -295,6 +295,7 @@ header {
 .heading {
     text-transform: uppercase;
     font-family: 'Neue Montreal-Book';
+    hyphens: none;
 }
 
 .scroll-to-top {
