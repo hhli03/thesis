@@ -233,7 +233,6 @@ header {
     display: inline;  /* Make caption text inline */
 }
 
-
 /* Fixed Yellow Divider Lines */
 .left-divider {
     position: fixed;
@@ -551,28 +550,19 @@ a {
         right: 0%;
     }
 
-    .column-divider-1 {
-        width: 0.3vw;
-        z-index: 30;
-    }
-    
-    .column-divider-2 {
-        width: 0.3vw;
-        z-index: 30;
-    }
-    
-    .column-divider-3 {
-        width: 0.3vw;
-        z-index: 30;
-    }
-
-    .column-divider-4 {
-        width: 0.3vw;
-        z-index: 30;
-    }
-
     /* Apply scroll-margin-top to the specific anchor target */
     #fig-no {
         scroll-margin-top: 15vw;
+    }
+
+        /* Fixed Yellow Divider Lines */
+    .left-divider {
+        width: 0.3vw;
+        z-index: 30;
+    }
+
+    .right-divider {
+        width: 0.3vw;
+        z-index: 30;
     }
 }
